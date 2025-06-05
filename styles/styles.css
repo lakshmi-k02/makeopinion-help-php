@@ -1,0 +1,220 @@
+/* Ensure w-full works if you don't have Tailwind/utility classes */
+.w-full {
+    width: 100%;
+}
+.text-left {
+    text-align: left;
+}
+.space-y-1 > div:not(:last-child) {
+    margin-bottom: 0.25rem;
+}
+
+/* Base styles for section/subsection content */
+.sidebar-section-content,
+.sidebar-subsection-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-left: 1rem; /* Indentation for content within sections */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for 'open' content sections */
+.sidebar-section-content.open,
+.sidebar-subsection-content.open {
+    max-height: 1000px; /* Adjust as needed - should be larger than any possible content height */
+    transition: max-height 0.5s ease-in;
+}
+
+/* Header button styles */
+.sidebar-section-header,
+.sidebar-subsection-header {
+    background: none;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(119, 119, 119); /* Dark theme text color */
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 4px;
+}
+
+.sidebar-subsection-header {
+    padding-left: 2rem; /* Indent subsections */
+    font-size: 0.88rem;
+}
+
+.sidebar-section-header:hover,
+.sidebar-subsection-header:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover for dark theme */
+    color: #fff;
+}
+
+/* Icon styles */
+.sidebar-section-header .icon,
+.sidebar-subsection-header .icon {
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+/* Rotate icon when 'open' */
+.sidebar-section-header.open .icon,
+.sidebar-subsection-header.open .icon {
+    transform: rotate(90deg);
+}
+
+/* Link styles */
+.sidebar-link {
+    display: block;
+    padding: 0.6rem 1rem 0.6rem 2.5rem; /* Adjust padding/indentation */
+    color: rgb(119, 119, 119); /* Lighter grey for links */
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 4px;
+    margin: 1px 0;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.sidebar-link.active {
+    background-color: #7250ba; /* Using the primary color from the original HTML */
+    color: #fff;
+    font-weight: bold;
+}
+
+.rm-Guides {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Add this to your CSS file for the nav/sidebar */
+nav {
+  width: 260px;           /* Set a fixed width for the sidebar */
+  min-width: 200px;
+  max-width: 320px;       /* Optional: prevent it from getting too wide */
+  white-space: normal;
+  word-break: normal;
+  overflow-x: auto;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* or space-evenly / flex-end */
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.rm-SearchModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 10000;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 80px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .rm-SearchModal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .AlgoliaSearch-Col2ycAQ9JMrSYg {
+            background: #fff;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .rm-SearchModal.show .AlgoliaSearch-Col2ycAQ9JMrSYg {
+            transform: translateY(0);
+        }
+        
+        .SearchBox1zrymSLJX6TP {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .SearchBox-InputUQZAW9QXMe-c {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .SearchTabs9v4kr3U2lwvI {
+            padding: 10px 20px;
+            background: #f8f8f8;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .Tabs-list {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .SearchTabs-Tab2715KRxrb5JT {
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .Tabs-listItem_active {
+            background: #f6f6f6;
+            color: white;
+        }
+        
+        .rm-SearchModal-empty {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .rm-SearchModal-empty-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+        
+        .close-search {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            z-index: 10001;
+        }
