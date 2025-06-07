@@ -235,3 +235,57 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
                     });
                 });
+
+
+// Global expandImage function for inline onclick usage
+function expandImage(img) {
+  // Create overlay
+  var overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = '0';
+  overlay.style.left = '0';
+  overlay.style.width = '100vw';
+  overlay.style.height = '100vh';
+  overlay.style.background = 'rgba(0,0,0,0.8)';
+  overlay.style.display = 'flex';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  overlay.style.zIndex = '9999';
+  overlay.style.cursor = 'zoom-out';
+
+  var expandedImg = document.createElement('img');
+  expandedImg.src = img.src;
+  expandedImg.alt = img.alt;
+  expandedImg.style.maxWidth = '90vw';
+  expandedImg.style.maxHeight = '90vh';
+  expandedImg.style.boxShadow = '0 4px 32px rgba(0,0,0,0.5)';
+  expandedImg.style.borderRadius = '8px';
+  expandedImg.style.background = '#fff';
+  expandedImg.style.padding = '8px';
+  expandedImg.style.border = '1px solid #ccc';
+  expandedImg.style.cursor = 'auto';
+
+  // Prevent click on image from closing overlay
+  expandedImg.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
+  // Close overlay on click outside image
+  overlay.addEventListener('click', function() {
+    document.body.removeChild(overlay);
+  });
+
+  // Close overlay on ESC key
+  function escListener(e) {
+    if (e.key === 'Escape') {
+      if (document.body.contains(overlay)) {
+        document.body.removeChild(overlay);
+        document.removeEventListener('keydown', escListener);
+      }
+    }
+  }
+  document.addEventListener('keydown', escListener);
+
+  overlay.appendChild(expandedImg);
+  document.body.appendChild(overlay);
+}

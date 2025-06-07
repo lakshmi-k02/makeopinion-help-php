@@ -1,7 +1,6 @@
 <?php 
 include './partials/header.php'; 
 include './core/router.php'; // Add this line to include the router
-
 ?>
 
 <main class="rm-Guides">

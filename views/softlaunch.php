@@ -62,8 +62,13 @@
                                     <li>Choose the soft launch type (e.g., clicks or completes).</li>
                                     <li>Specify the number of clicks or completes required.</li>
                                 </ul>
-                                <img src="images\soft_launch.png" alt="Access the Project Image" style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px;">
-                            </li>
+                                                   <li>
+                            <span style="display:block; text-align:center;">
+  <img src="images/soft_launch.png" alt="edit audience" 
+       style="margin-top: 10px; max-width: 100%; height:100%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;" 
+       onclick="expandImage(this)">
+    </span>
+                    </li>
                             <li><strong>Save Changes:</strong> Click <strong>Save</strong> to apply your settings.</li>
                             <li>Once saved, the soft launch configuration is active.</li>
                         </ul>
