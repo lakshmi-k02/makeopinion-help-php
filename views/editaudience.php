@@ -45,9 +45,9 @@
                     <li>Go to the project where the audience is listed (e.g., <em>2025 Thursday 05 custom_survey</em>).</li>
                     <li>Click the three vertical dots (⋯) beside the audience name.</li>
                     <li>Choose <strong>Edit Audience Settings</strong> from the dropdown.</li>
-             <span style="display:block; text-align:center;">
+             <span style="display:block;">
   <img src="images/EditAudience.png" alt="edit audience" 
-       style="margin-top: 10px; max-width: 100%; height:100%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;" 
+       style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;" 
        onclick="expandImage(this)">
 </span>
                     <li>The <strong>Edit Audience</strong> panel will open on the right.</li>
@@ -72,9 +72,9 @@
                 <ul>
                     <li>Click <strong>Save Changes</strong> to keep your edits without applying them yet.</li>
                     <li>Click <strong>Apply Changes</strong> to make them live.</li>
-                                                <span style="display:block; text-align:center;">
+                                                <span style="display:block">
   <img src="images/EditAudience2.png" alt="edit audience" 
-       style="margin-top: 10px; max-width: 100%; height:100%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;" 
+       style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;" 
        onclick="expandImage(this)">
     </span>
                     <li>Click <strong>Cancel</strong> to discard any unsaved changes.</li>
