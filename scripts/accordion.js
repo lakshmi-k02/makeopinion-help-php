@@ -63,8 +63,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const STORAGE_KEY = 'sidebarState';
 
-    // Load saved state from localStorage
-    const savedState = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    // Load saved state from sessionStorage
+    const savedState = JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {};
 
     const expandButtons = document.querySelectorAll('.Sidebar-link-buttonWrapper3hnFHNku8_BJ');
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Save new state
         savedState[menuId] = shouldExpand;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
 
         // Active class management
         document.querySelectorAll('.Sidebar-link_parent a').forEach(link => link.classList.remove('active'));
