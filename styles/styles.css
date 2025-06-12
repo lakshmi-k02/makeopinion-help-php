@@ -219,4 +219,126 @@ nav {
             z-index: 10001;
         }
 
-  
+  /* Add these styles to your existing styles.css */
+
+/* Search Results Styles */
+.SearchResults2G1wv8-Fb__d {
+    padding: 20px;
+    background: #fff;
+}
+
+.SearchResults-list1K5B-Tc-CEqg {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.SearchResults-Result3TWcEjpDrkd5 {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 8px;
+    background: #fff;
+    color: #2d2250;
+    text-decoration: none;
+    border: 1px solid #ece6fa;
+    transition: all 0.2s ease;
+}
+
+.SearchResults-Result3TWcEjpDrkd5:hover {
+    background: #f6f3fd;
+    border-color: #d1c4f6;
+    box-shadow: 0 4px 16px rgba(114,80,186,0.13);
+}
+
+.SearchResults-Result-Icon2Y3KBBRMHQVZ {
+    margin-right: 12px;
+    color: #7250ba;
+    font-size: 18px;
+}
+
+.SearchResults-Result-TextoHt6MHPXQ4wk {
+    flex: 1;
+}
+
+.SearchResults-Result-HeaderCczExPFd06go {
+    margin-bottom: 4px;
+}
+
+.SearchResults-Result-TitlelacDJQ7ZLXvz {
+    font-weight: 500;
+    font-size: 16px;
+    color: #2d2250;
+}
+
+.SearchResults-Result-Excerpt_uiIutiTwGtZ {
+    font-size: 14px;
+    color: #666;
+}
+
+.ais-Snippet-highlighted {
+    background: rgba(114, 80, 186, 0.2);
+    color: #452e76;
+    font-style: italic;
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Tab Styles */
+.Tabs-list {
+    display: flex;
+    gap: 8px;
+    padding: 0 20px;
+    margin-bottom: 0;
+}
+
+.SearchTabs-Tab2715KRxrb5JT {
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.Tabs-listItem_active {
+    background: #dad7e1;
+    color: white !important;
+}
+
+/* Search Box Styles */
+.SearchBox1zrymSLJX6TP {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.SearchBox-InputUQZAW9QXMe-c {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.SearchBox-InputUQZAW9QXMe-c:focus {
+    border-color: #d6cfe4;
+    box-shadow: 0 0 0 2px rgba(114, 80, 186, 0.2);
+}
+
+/* No Results Styles */
+.rm-SearchModal-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: #888;
+}
+
+.rm-SearchModal-empty-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+

@@ -191,18 +191,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="rm-SearchModal-empty SearchResults2G1wv8-Fb__d SearchResults_empty4svl7jAtcKBq">
-                        <span class="IconWrapper Icon-wrapper2z2wVIeGsiUy">
-                            <svg fill="none" viewBox="0 0 24 24" 
-                                class="Icon Icon3_D2ysxFZ_ll Icon-svg2Lm7f6G9Ly5a rm-SearchModal-empty-icon icon icon-search" 
-                                data-name="search" role="img" 
-                                style="--icon-color: inherit; --icon-size: var(--icon-md); --icon-stroke-width: 2px">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
-                                    d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4.35-4.35" 
-                                    class="icon-stroke-width"></path>
-                            </svg>
-                        </span>
-                        <h6 class="Title Title6 rm-SearchModal-empty-text">Start typing to search…</h6>
-                    </div>
+                    
                 </div>
             </div>

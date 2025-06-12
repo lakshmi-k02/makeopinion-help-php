@@ -27,13 +27,13 @@
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
                                 <li class="Sidebar-item23D-2Kd61_k3"><a
                                         class="Sidebar-link2Dsha-r-GKh2 childless subpage text-wrap rm-Sidebar-link"
-                                        target="_self" href="?page=article1.php"><span
+                                        target="_self" href=""><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">Live
                                                 Projects</span></span></a></li>
                                 <li class="Sidebar-item23D-2Kd61_k3"><a
                                         class="Sidebar-link2Dsha-r-GKh2 childless subpage text-wrap rm-Sidebar-link"
-                                        target="_self" href="?page=article2.php"><span
+                                        target="_self" href=""><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">Performance
                                                 Metrics</span></span></a></li>
