@@ -17,9 +17,10 @@
 
       <div class="rm-Markdown markdown-body" data-testid="RDMD" style="margin-left:31px">
         <div class="search-box" style="margin: 24px 0;">
-          <form action="/search" method="get">
-            <input type="text" name="q" placeholder="Search help articles..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+          <form action="/search" method="get" id="inline-search-form">
+            <input type="text" name="q" id="inline-search-input" autocomplete="off" placeholder="Search help articles..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
           </form>
+          <div id="inline-search-results" style="display:none; margin-top: 8px;"></div>
         </div>
 
         <h2>Popular Topics</h2>

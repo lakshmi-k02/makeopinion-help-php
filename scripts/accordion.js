@@ -724,3 +724,66 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(overlay);
     };
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('inline-search-input');
+  const results = document.getElementById('inline-search-results');
+
+  // Helper to get sidebar links (same as in accordion.js)
+  function getSidebarLinks() {
+    const nav = document.getElementById('hub-sidebar');
+    if (!nav) return [];
+    const links = nav.querySelectorAll('a[href]');
+    return Array.from(links).map(link => ({
+      href: link.getAttribute('href'),
+      text: link.textContent.trim() || link.getAttribute('href')
+    })).filter(l => l.href && l.href !== '#');
+  }
+
+  function highlightMatches(text, query) {
+    if (!query || !text) return text;
+    const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    return text.replace(regex, match => `<mark style="background:#f6f3fd;color:#7250ba">${match}</mark>`);
+  }
+
+  function renderResults(links, filter = '') {
+    if (!filter) {
+      results.style.display = 'none';
+      results.innerHTML = '';
+      return;
+    }
+    const filtered = links.filter(l =>
+      l.text.toLowerCase().includes(filter.toLowerCase()) ||
+      l.href.toLowerCase().includes(filter.toLowerCase())
+    );
+    if (filtered.length === 0) {
+      results.innerHTML = '<div style="padding:1em;color:#888;">No results found.</div>';
+      results.style.display = 'block';
+      return;
+    }
+    results.innerHTML = `
+      <div style="background:#fff;border:1px solid #ece6fa;border-radius:8px;box-shadow:0 2px 8px rgba(114,80,186,0.07);">
+        ${filtered.map(l => `
+          <a href="${l.href}" style="display:block;padding:0.7em 1em;text-decoration:none;color:#2d2250;border-bottom:1px solid #f3f0fa;">
+            ${highlightMatches(l.text, filter)}
+          </a>
+        `).join('')}
+      </div>
+    `;
+    results.style.display = 'block';
+  }
+
+  const links = getSidebarLinks();
+
+  input.addEventListener('input', function() {
+    renderResults(links, input.value.trim());
+  });
+
+  // Hide results if input is cleared or loses focus (optional)
+  input.addEventListener('blur', function() {
+    setTimeout(() => { results.style.display = 'none'; }, 200);
+  });
+  input.addEventListener('focus', function() {
+    if (input.value.trim()) renderResults(links, input.value.trim());
+  });
+});
