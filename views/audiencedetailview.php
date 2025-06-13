@@ -28,7 +28,11 @@
           <li>Navigate to your project's main view, which displays the <strong>Audience List</strong>.</li>
           <li>Click on the specific audience name from the list to open its detailed view.</li>
         </ol>
-
+        <span style="display:block;">
+          <img src="images/AudienceDetailedview.png" alt="Audience Detail View"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
         </h2>

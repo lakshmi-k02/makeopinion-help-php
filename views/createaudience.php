@@ -34,6 +34,12 @@
           <li>In the new tab that opens, click <strong>Start New Survey</strong>.</li>
         </ul>
 
+           <span style="display:block;">
+                        <img src="images/createAudience1.png" alt="edit audience"
+                            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+                            onclick="expandImage(this)">
+                    </span>
+
         <h4>2. Enter Project Details</h4>
         <ul>
           <li>Fill in the project details form:
@@ -45,7 +51,11 @@
           </li>
           <li>Click the <strong>Create Project</strong> button.</li>
         </ul>
-
+                <span style="display:block;">
+                        <img src="images/createAudience2.png" alt="edit audience"
+                            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+                            onclick="expandImage(this)">
+                    </span>
         <h4>3. Define Your Audience</h4>
         <ul>
           <li>On the project page, click the <strong>Create Audience</strong> button to open the configuration window.</li>
@@ -58,7 +68,11 @@
           </li>
           <li>Click <strong>Continue</strong> to proceed.</li>
         </ul>
-
+            <span style="display:block;">
+                        <img src="images/createAudience4.png" alt="edit audience"
+                            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+                            onclick="expandImage(this)">
+                    </span>
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
         </h2>
