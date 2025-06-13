@@ -36,7 +36,17 @@
         <ul>
           <li>Go to the <strong>Design</strong> tab of your project.</li>
           <li>Click <strong>Select Audience</strong> in the top right navigation area.</li>
+                  <span style="display:block;">
+          <img src="images/NavAudienceList.png" alt="Navigating Audience List"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
           <li>A panel will slide open, displaying all configured audiences.</li>
+           <span style="display:block;">
+          <img src="images/NavAudienceList2.png" alt="Navigating Audience List"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
         </ul>
 
         <h2 class="heading heading-2 header-scroll" id="key-components">

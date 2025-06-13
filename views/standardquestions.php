@@ -28,10 +28,20 @@
         </h2>
         <ul>
           <li>Click on <strong>“Add Screening Question”</strong> from the Audience Details section.</li>
+               <span style="display:block;">
+          <img src="images/StandardScreeningQuestins1.png" alt="Standard Screening Questions"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
           <li>The <strong>Standard Questions Library</strong> tab opens by default.</li>
           <li>Browse or search for specific questions (e.g., ZIP Code, Employment Status).</li>
           <li>Select the desired question(s).</li>
           <li>Click <strong>“Add Question(s) to Audience”</strong>.</li>
+            <span style="display:block;">
+          <img src="images/StandardScreeningQuestiions2.png" alt="Standard Screening Questions"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
         </ul>
 
         <h2 class="heading heading-2 header-scroll" id="fields">

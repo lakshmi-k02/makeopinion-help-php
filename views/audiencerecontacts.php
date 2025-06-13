@@ -28,6 +28,11 @@
         <ol>
           <li>Navigate to <strong>Edit Audience</strong>.</li>
           <li>Go to the <strong>Recontacts</strong> tab.</li>
+          <span style="display:block;">
+          <img src="images/audiencerecontacts.png" alt="Audience Recontacts"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
           <li>Toggle the <strong>Enabled</strong> switch.</li>
           <li>Choose between:
             <ul>

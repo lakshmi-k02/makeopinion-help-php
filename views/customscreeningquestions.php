@@ -23,6 +23,11 @@
           <li>Navigate to the <strong>Design</strong> tab of your survey project.</li>
           <li>In the <strong>Audience Details</strong> section, click <strong>Add Screening Question</strong>.</li>
           <li>In the pop-up that appears, scroll to the bottom and select the <strong>CUSTOM</strong> option in the Standard Questions Library.</li>
+               <span style="display:block;">
+          <img src="images/CustomScreeningQuestions.png" alt="Custom Screening Questions"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
           <li>Click <strong>Create New Question</strong>.</li>
           <li>Confirm the action in the modal by clicking <strong>Create new question</strong>.</li>
           <li>In the Add Custom Screener setup window:

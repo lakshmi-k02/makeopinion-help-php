@@ -62,13 +62,14 @@
                                     <li>Choose the soft launch type (e.g., clicks or completes).</li>
                                     <li>Specify the number of clicks or completes required.</li>
                                 </ul>
-                                                   <li>
-                            <span style="display:block; text-align:center;">
-  <img src="images/soft_launch.png" alt="edit audience" 
-       style="margin-top: 10px; max-width: 100%; height:100%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;" 
-       onclick="expandImage(this)">
-    </span>
-                    </li>
+                            <li>
+
+                                <span style="display:block;">
+                                    <img src="images/soft_launch.png" alt="Soft Launch Configuration"
+                                        style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+                                        onclick="expandImage(this)">
+                                </span>
+                            </li>
                             <li><strong>Save Changes:</strong> Click <strong>Save</strong> to apply your settings.</li>
                             <li>Once saved, the soft launch configuration is active.</li>
                         </ul>
@@ -122,7 +123,7 @@
                             <li>User must <strong>manually resume</strong> for full launch.</li>
                             <li>Can be used once per project.</li>
                         </ul>
-                        
+
             </div>
             <div class="UpdatedAt">
                 <p class="DateLine "><i class="icon icon-watch"></i>Updated 8 months

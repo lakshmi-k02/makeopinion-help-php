@@ -37,6 +37,11 @@
         <h4>2. Enable Scheduling</h4>
         <ul>
           <li>Click on the <strong>Schedule Audience</strong> toggle.</li>
+                    <span style="display:block;">
+          <img src="images/ScheduleAudience.png" alt="Scheduled Audience"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
           <li>This will enable the datetime picker below the audience name.</li>
         </ul>
 

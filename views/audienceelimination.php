@@ -28,6 +28,11 @@
             <ul>
               <li>Click the <strong>⚙️ Edit Audience</strong> icon next to the add new audience.</li>
               <li>Navigate to the <strong>Eliminations</strong> tab.</li>
+                   <span style="display:block;">
+          <img src="images/AudienceEliminations.png" alt="Audience Eliminations"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
             </ul>
           </li>
         </ul>

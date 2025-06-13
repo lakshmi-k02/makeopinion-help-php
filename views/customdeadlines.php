@@ -37,6 +37,11 @@
         <h4>2. Navigate to Custom Deadlines</h4>
         <ul>
           <li>On the project page, locate and click on the <strong>Custom Deadlines</strong> button (usually at the bottom or in the project controls).</li>
+          <span style="display:block;">
+          <img src="images/CustomDeadline.png" alt="Custom Deadlines"
+            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            onclick="expandImage(this)">
+        </span>
         </ul>
 
         <h4>3. Configure Dates</h4>
