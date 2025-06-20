@@ -1,0 +1,17 @@
+/* Font Awesome 5.15.4 - Only Chevron Right Icon (fa-chevron-right) */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fa-solid-900.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa-chevron-right:before {
+  font-family: 'FontAwesome';
+  content: "\f054";
+  font-weight: 900;
+  font-style: normal;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
