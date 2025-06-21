@@ -2,9 +2,7 @@
     class="rm-Sidebar hub-sidebar reference-redesign Nav3C5f8FcjkaHj rm-Sidebar_guides"
     id="hub-sidebar" role="navigation">
     <div class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="accordion.css">
+       
         <div class="space-y-1">
 
             <div class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content">
@@ -23,7 +21,8 @@
                                     aria-label="Hide subpages for Getting started"
                                     class="Sidebar-link-buttonWrapper3hnFHNku8_BJ" type="button"><i
                                         aria-hidden="true"
-                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW icon-chevron-rightward"></i></button></a>
+                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW fas fa-chevron-right"
+                                        style="font-size: 0.85em;"></i></button></a>
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
                                 <li class="Sidebar-item23D-2Kd61_k3"><a
                                         class="Sidebar-link2Dsha-r-GKh2 childless subpage text-wrap rm-Sidebar-link"
@@ -61,7 +60,8 @@
                                     aria-label="Hide subpages for Integration scenarios"
                                     class="Sidebar-link-buttonWrapper3hnFHNku8_BJ" type="button"><i
                                         aria-hidden="true"
-                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW icon-chevron-rightward"></i></button></a>
+                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW fas fa-chevron-right"
+                                        style="font-size: 0.85em;"></i></button></a>
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
 
                                 <?php
@@ -115,7 +115,8 @@
                                     aria-label="Hide subpages for Feasibility methods"
                                     class="Sidebar-link-buttonWrapper3hnFHNku8_BJ" type="button"><i
                                         aria-hidden="true"
-                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW icon-chevron-rightward"></i></button></a>
+                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW fas fa-chevron-right"
+                                        style="font-size: 0.85em;"></i></button></a>
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
 
                                 <?php
@@ -169,7 +170,8 @@
                                     aria-label="Hide subpages for Feasibility methods"
                                     class="Sidebar-link-buttonWrapper3hnFHNku8_BJ" type="button"><i
                                         aria-hidden="true"
-                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW icon-chevron-rightward"></i></button></a>
+                                        class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW fas fa-chevron-right"
+                                        style="font-size: 0.85em;"></i></button></a>
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
                                 <!-- conver this to sub menu with buttons -->
                                 <li class="Sidebar-item23D-2Kd61_k3 subnav-expanded"><a
@@ -180,7 +182,8 @@
                                             aria-label="Hide subpages for Respondent experience"
                                             class="Sidebar-link-buttonWrapper3hnFHNku8_BJ"
                                             type="button"><i aria-hidden="true"
-                                                class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW icon-chevron-rightward"></i></button></a>
+                                                class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW fas fa-chevron-right"
+                                                style="font-size: 0.85em;"></i></button></a>
                                     <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
 
                                         <?php

@@ -12,8 +12,6 @@ include './core/router.php'; // Add this line to include the router
   <article id="main-content">
     <?php route(); ?>
   </article>
-
-  <script src="public/main.js"></script>
 </main>
 
 <footer aria-label="Status banner" class="Footer2U8XAPoGhlgO AppFooter rm-Banners"></footer>

@@ -12,26 +12,13 @@
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
 
-    <link data-chunk="main" rel="stylesheet"
-        href="https://cdn.readme.io/public/hub/web/ui-styles.8389ef0a9b5b5b4bb6a4.css">
-    <link data-chunk="main" rel="stylesheet" href="https://cdn.readme.io/public/hub/web/main.87547b69b0ca983798ee.css">
+    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-styles.css">
+    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-header.css">  
+    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-routes.css">  
+    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-footer.css">  
 
-    <link data-chunk="Header" rel="stylesheet"
-        href="https://cdn.readme.io/public/hub/web/Header.4f2e29f56fa1781ea661.css">
+    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-main.css"> 
 
-    <link data-chunk="routes-Doc" rel="stylesheet"
-        href="https://cdn.readme.io/public/hub/web/routes-Doc.176eb20f4242235c3011.css">
-    <link data-chunk="Footer" rel="stylesheet"
-        href="https://cdn.readme.io/public/hub/web/Footer.7ca87f1efe735da787ba.css">
-    <link href="https://fonts.googleapis.com/" rel="preconnect">
-    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous">
-    
-    <script src="<?php echo $server; ?>/assets/js/webfont.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="<?php echo $server; ?>/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?php echo $server; ?>/assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?php echo $server; ?>/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="<?php echo $server; ?>/assets/css/style.css?15" media="all">
-    <link rel="stylesheet" href="<?php echo $server; ?>/assets/css/responsive.css?22">
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- control dark theme and light theme -->
