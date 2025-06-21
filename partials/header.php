@@ -11,13 +11,18 @@
     // Get the current page address
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
+    <link rel="stylesheet" href="/styles/ui-styles.css">  
+    <link rel="stylesheet" href="/styles/ui-header.css">    
+    <link rel="stylesheet" href="/styles/ui-main.css">
+    <link rel="stylesheet" href="/styles/ui-footer.css">
+    <link rel="stylesheet" href="/styles/ui-routes.css">
 
-    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-styles.css">
+    <!-- <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-styles.css">
     <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-header.css">  
     <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-routes.css">  
     <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-footer.css">  
 
-    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-main.css"> 
+    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-main.css">  -->
 
     <link rel="stylesheet" href="styles/styles.css">
 
