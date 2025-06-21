@@ -16,19 +16,10 @@
     <link rel="stylesheet" href="/styles/ui-main.css">
     <link rel="stylesheet" href="/styles/ui-footer.css">
     <link rel="stylesheet" href="/styles/ui-routes.css">
-
-    <!-- <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-styles.css">
-    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-header.css">  
-    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-routes.css">  
-    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-footer.css">  
-
-    <link data-chunk="main" rel="stylesheet" href="<?php echo $server; ?>/styles/ui-main.css">  -->
-
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- control dark theme and light theme -->
     <script>
-        // Fixed: Set theme directly on HTML element
         var storedColorMode = localStorage.getItem('color-scheme') || 'system';
         document.documentElement.setAttribute('data-color-mode', storedColorMode);
     </script>
@@ -52,7 +43,7 @@
                                     class="rm-Logo-img  Header-logo-img3YvV4lcGKkeb" src="images/logo.svg" /></a><a
                                 aria-current="page"
                                 class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text rm-Header-top-link_active Header-link2tXYTgXq85zW active"
-                                href="/docs" target="_self">Documentation</a></div>
+                                href="" target="_self">Documentation</a></div>
                         <div class="rm-Header-left Header-leftADQdGVqx1wqU Header-left_mobile1RG-X93lx6PF">
                             <div><button aria-label="Toggle navigation menu" class="icon-menu menu3d6DYNDa3tk5"
                                     type="button"></button>
