@@ -34,7 +34,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated <?php echo date("F Y"); ?></p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
       </div>
 
       <hr class="NextStepsDivider" />
