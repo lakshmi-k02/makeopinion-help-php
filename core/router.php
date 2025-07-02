@@ -14,7 +14,10 @@ function route() {
         'audiencerecontacts',
         'audienceelimination',
         'audiencedetailview',
-        'customscreeningquestions'
+        'customscreeningquestions',
+        'enabledisablequotas',
+        'nationalrepresentativequotas',
+        'enablequotas'
     ];
 
     $page = $_GET['page'] ?? 'home';

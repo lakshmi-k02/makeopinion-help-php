@@ -2,7 +2,7 @@
     class="rm-Sidebar hub-sidebar reference-redesign Nav3C5f8FcjkaHj rm-Sidebar_guides"
     id="hub-sidebar" role="navigation">
     <div class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content">
-       
+
         <div class="space-y-1">
 
             <div class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content">
@@ -24,6 +24,8 @@
                                         class="Sidebar-link-iconnjiqEiZlPn0W Sidebar-link-expandIcon2yVH6SarI6NW fas fa-chevron-right"
                                         style="font-size: 0.85em;"></i></button></a>
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+
+
                                 <li class="Sidebar-item23D-2Kd61_k3"><a
                                         class="Sidebar-link2Dsha-r-GKh2 childless subpage text-wrap rm-Sidebar-link"
                                         target="_self" href=""><span
@@ -65,7 +67,7 @@
                             <ul class="subpages Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
 
                                 <?php
-                                $pagename = "createaudience"; // Remove .php extension
+                                $pagename = "createaudience";
                                 ?>
                                 <li class="Sidebar-item23D-2Kd61_k3"><a
                                         class="Sidebar-link2Dsha-r-GKh2 childless subpage text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] ==  $pagename) ? 'active' : ''; ?>"
@@ -204,7 +206,7 @@
                                                 class="Sidebar-link2Dsha-r-GKh2 childless subpage text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] ==  $pagename) ? 'active' : ''; ?>"
                                                 target="_self" href="?page=<?php echo $pagename; ?>"><span
                                                     class="Sidebar-link-textLuTE1ySm4Kqn"><span
-                                                    class="Sidebar-link-text_label1gCT_uPnx7Gu">Custom Questions</span></span></a>
+                                                        class="Sidebar-link-text_label1gCT_uPnx7Gu">Custom Questions</span></span></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -236,21 +238,34 @@
                 <section class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
                     <h2 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">Quotas</h2>
                     <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
+
+
+                        <?php
+                        $pagename = "nationalrepresentativequotas";
+                        ?>
                         <li class="Sidebar-item23D-2Kd61_k3"><a
-                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"
-                                target="_self" href=""><span
+                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] ==  $pagename) ? 'active' : ''; ?>"
+                                target="_self" href="?page=<?php echo $pagename; ?>"><span
                                     class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                         class="Sidebar-link-text_label1gCT_uPnx7Gu">National Representative Quotas</span></span></a>
                         </li>
+
+                        <?php
+                        $pagename = "enablequotas";
+                        ?>
                         <li class="Sidebar-item23D-2Kd61_k3"><a
-                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"
-                                target="_self" href=""><span
+                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] ==  $pagename) ? 'active' : ''; ?>"
+                                target="_self" href="?page=<?php echo $pagename; ?>"><span
                                     class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                         class="Sidebar-link-text_label1gCT_uPnx7Gu">Enable Quotas</span></span></a>
                         </li>
+
+                        <?php
+                        $pagename = "enabledisablequotas";
+                        ?>
                         <li class="Sidebar-item23D-2Kd61_k3"><a
-                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"
-                                target="_self" href=""><span
+                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] ==  $pagename) ? 'active' : ''; ?>"
+                                target="_self" href="?page=<?php echo $pagename; ?>"><span
                                     class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                         class="Sidebar-link-text_label1gCT_uPnx7Gu">Enable/Disable Quota Answers</span></span></a>
                         </li>
