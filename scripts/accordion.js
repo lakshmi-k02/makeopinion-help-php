@@ -145,31 +145,31 @@
 //                 document.addEventListener('DOMContentLoaded', function() {
 //                     const toggleBtn = document.getElementById('theme-toggle-button');
 //                     const html = document.documentElement;
-                    
+
 //                     if (toggleBtn) {
 //                         toggleBtn.addEventListener('click', function() {
 //                             const currentMode = html.getAttribute('data-color-mode') || 'system';
 //                             const nextMode = currentMode === 'dark' ? 'light' : 'dark';
-                            
+
 //                             // Update UI
 //                             html.setAttribute('data-color-mode', nextMode);
-                            
+
 //                             // Save preference
 //                             localStorage.setItem('color-scheme', nextMode);
-                            
+
 //                             // Update button visuals
 //                             const isDark = nextMode === 'dark';
 //                             toggleBtn.setAttribute('aria-label', isDark ? 
 //                                 'Toggle to light mode' : 'Toggle to dark mode');
 //                         });
 //                     }
-                    
+
 //                     // Apply saved theme preference
 //                     const savedMode = localStorage.getItem('color-scheme');
 //                     if (savedMode) {
 //                         html.setAttribute('data-color-mode', savedMode);
 //                     }
-                    
+
 //                     // Search modal functionality
 //                     const searchToggle = document.getElementById('search-toggle-button');
 //                     const mobileSearchToggle = document.getElementById('search-toggle-button-mobile');
@@ -286,36 +286,36 @@
 //                     if (mobileSearchToggle) {
 //                         mobileSearchToggle.addEventListener('click', showSearchModal);
 //                     }
-                    
+
 //                     // Close button
 //                     if (closeSearch) {
 //                         closeSearch.addEventListener('click', hideSearchModal);
 //                     }
-                    
+
 //                     // Close modal when clicking outside content
 //                     searchModal.addEventListener('click', function(e) {
 //                         if (e.target === searchModal) {
 //                             hideSearchModal();
 //                         }
 //                     });
-                    
+
 //                     // Close modal with ESC key
 //                     document.addEventListener('keydown', function(e) {
 //                         if (e.key === 'Escape' && searchModal.classList.contains('show')) {
 //                             hideSearchModal();
 //                         }
 //                     });
-                    
+
 //                     // Tab switching functionality
 //                     const tabs = document.querySelectorAll('.SearchTabs-Tab2715KRxrb5JT');
 //                     tabs.forEach(tab => {
 //                         tab.addEventListener('click', function() {
 //                             // Remove active class from all tabs
 //                             tabs.forEach(t => t.classList.remove('Tabs-listItem_active'));
-                            
+
 //                             // Add active class to clicked tab
 //                             this.classList.add('Tabs-listItem_active');
-                            
+
 //                             // Set aria-selected attributes
 //                             tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
 //                             this.setAttribute('aria-selected', 'true');
@@ -427,9 +427,18 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem(STORAGE_KEY, JSON.stringify(savedState));
 
         // Active class management
-        document.querySelectorAll('.Sidebar-link_parent a').forEach(link => link.classList.remove('active'));
+        // document.querySelectorAll('.Sidebar-link_parent a').forEach(link => link.classList.remove('active'));
+        // const activeLink = parentLi.querySelector('a');
+        // if (activeLink) activeLink.classList.add('active');
+        const sidebar = document.getElementById('hub-sidebar');
+        if (sidebar) {
+            const allLinks = sidebar.querySelectorAll('a');
+            allLinks.forEach(a => a.classList.remove('active'));
+        }
+
+        // Add active class to current item
         const activeLink = parentLi.querySelector('a');
-        if (activeLink) activeLink.classList.add('active');
+        if (activeLink) activeLink.classList.add('active'); 
     }
 
     // Bind click handlers
@@ -468,31 +477,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle functionality
     const toggleBtn = document.getElementById('theme-toggle-button');
     const html = document.documentElement;
-    
+
     if (toggleBtn) {
-        toggleBtn.addEventListener('click', function() {
+        toggleBtn.addEventListener('click', function () {
             const currentMode = html.getAttribute('data-color-mode') || 'system';
             const nextMode = currentMode === 'dark' ? 'light' : 'dark';
-            
+
             // Update UI
             html.setAttribute('data-color-mode', nextMode);
-            
+
             // Save preference
             localStorage.setItem('color-scheme', nextMode);
-            
+
             // Update button visuals
             const isDark = nextMode === 'dark';
-            toggleBtn.setAttribute('aria-label', isDark ? 
+            toggleBtn.setAttribute('aria-label', isDark ?
                 'Toggle to light mode' : 'Toggle to dark mode');
         });
     }
-    
+
     // Apply saved theme preference
     const savedMode = localStorage.getItem('color-scheme');
     if (savedMode) {
         html.setAttribute('data-color-mode', savedMode);
     }
-    
+
     // Search modal functionality
     const searchToggle = document.getElementById('search-toggle-button');
     const mobileSearchToggle = document.getElementById('search-toggle-button-mobile');
@@ -512,27 +521,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getSidebarLinks() {
-    const nav = document.getElementById('hub-sidebar');
-    if (!nav) return [];
+        const nav = document.getElementById('hub-sidebar');
+        if (!nav) return [];
 
-    const allLinks = nav.querySelectorAll('a[href]');
-    return Array.from(allLinks).map(link => {
-        // Optional: add indentation for subpages based on nesting depth
-        let depth = 0;
-        let parent = link.parentElement;
-        while (parent && parent !== nav) {
-            if (parent.tagName.toLowerCase() === 'ul') depth++;
-            parent = parent.parentElement;
-        }
+        const allLinks = nav.querySelectorAll('a[href]');
+        return Array.from(allLinks).map(link => {
+            // Optional: add indentation for subpages based on nesting depth
+            let depth = 0;
+            let parent = link.parentElement;
+            while (parent && parent !== nav) {
+                if (parent.tagName.toLowerCase() === 'ul') depth++;
+                parent = parent.parentElement;
+            }
 
-        return {
-            href: link.getAttribute('href'),
-            text: link.textContent.trim() || link.getAttribute('href'),
-            section: link.closest('section')?.querySelector('h2')?.textContent || 'Documentation',
-            depth: depth
-        };
-    }).filter(l => l.href && l.href !== '#');
-}
+            return {
+                href: link.getAttribute('href'),
+                text: link.textContent.trim() || link.getAttribute('href'),
+                section: link.closest('section')?.querySelector('h2')?.textContent || 'Documentation',
+                depth: depth
+            };
+        }).filter(l => l.href && l.href !== '#');
+    }
 
 
     function highlightMatches(text, query) {
@@ -543,13 +552,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderSearchResults(links, filter = '') {
         if (!searchResultsContainer) return;
-        
-        const filtered = filter 
-            ? links.filter(l => 
-                l.text.toLowerCase().includes(filter.toLowerCase()) || 
+
+        const filtered = filter
+            ? links.filter(l =>
+                l.text.toLowerCase().includes(filter.toLowerCase()) ||
                 l.href.toLowerCase().includes(filter.toLowerCase()) ||
                 (l.section && l.section.toLowerCase().includes(filter.toLowerCase()))
-            ) 
+            )
             : links;
 
         if (filtered.length === 0) {
@@ -617,44 +626,44 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileSearchToggle) {
         mobileSearchToggle.addEventListener('click', showSearchModal);
     }
-    
+
     // Close button
     if (closeSearch) {
         closeSearch.addEventListener('click', hideSearchModal);
     }
-    
+
     // Close modal when clicking outside content
     if (searchModal) {
-        searchModal.addEventListener('click', function(e) {
+        searchModal.addEventListener('click', function (e) {
             if (e.target === searchModal) {
                 hideSearchModal();
             }
         });
     }
-    
+
     // Close modal with ESC key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && searchModal?.classList.contains('show')) {
             hideSearchModal();
         }
     });
-    
+
     // Tab switching functionality
     const tabs = document.querySelectorAll('.SearchTabs-Tab2715KRxrb5JT');
     tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
             tabs.forEach(t => {
                 t.classList.remove('Tabs-listItem_active');
                 t.setAttribute('aria-selected', 'false');
             });
             this.classList.add('Tabs-listItem_active');
             this.setAttribute('aria-selected', 'true');
-            
+
             // Filter results by tab type
             const links = getSidebarLinks();
             const filterType = this.getAttribute('aria-label');
             const searchTerm = searchInput.value;
-            
+
             let filteredLinks = links;
             if (filterType !== 'All') {
                 filteredLinks = links.filter(l => l.section.includes(filterType));
@@ -665,14 +674,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filter results as user types
     if (searchInput) {
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function () {
             const links = getSidebarLinks();
             renderSearchResults(links, searchInput.value);
         });
     }
 
     // Global expandImage function for inline onclick usage
-    window.expandImage = function(img) {
+    window.expandImage = function (img) {
         // Create overlay
         var overlay = document.createElement('div');
         overlay.style.position = 'fixed';
@@ -700,12 +709,12 @@ document.addEventListener('DOMContentLoaded', () => {
         expandedImg.style.cursor = 'auto';
 
         // Prevent click on image from closing overlay
-        expandedImg.addEventListener('click', function(e) {
+        expandedImg.addEventListener('click', function (e) {
             e.stopPropagation();
         });
 
         // Close overlay on click outside image
-        overlay.addEventListener('click', function() {
+        overlay.addEventListener('click', function () {
             document.body.removeChild(overlay);
         });
 
@@ -725,43 +734,43 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const input = document.getElementById('inline-search-input');
-  const results = document.getElementById('inline-search-results');
+document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('inline-search-input');
+    const results = document.getElementById('inline-search-results');
 
-  // Helper to get sidebar links (same as in accordion.js)
-  function getSidebarLinks() {
-    const nav = document.getElementById('hub-sidebar');
-    if (!nav) return [];
-    const links = nav.querySelectorAll('a[href]');
-    return Array.from(links).map(link => ({
-      href: link.getAttribute('href'),
-      text: link.textContent.trim() || link.getAttribute('href')
-    })).filter(l => l.href && l.href !== '#');
-  }
-
-  function highlightMatches(text, query) {
-    if (!query || !text) return text;
-    const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-    return text.replace(regex, match => `<mark style="background:#f6f3fd;color:#7250ba">${match}</mark>`);
-  }
-
-  function renderResults(links, filter = '') {
-    if (!filter) {
-      results.style.display = 'none';
-      results.innerHTML = '';
-      return;
+    // Helper to get sidebar links (same as in accordion.js)
+    function getSidebarLinks() {
+        const nav = document.getElementById('hub-sidebar');
+        if (!nav) return [];
+        const links = nav.querySelectorAll('a[href]');
+        return Array.from(links).map(link => ({
+            href: link.getAttribute('href'),
+            text: link.textContent.trim() || link.getAttribute('href')
+        })).filter(l => l.href && l.href !== '#');
     }
-    const filtered = links.filter(l =>
-      l.text.toLowerCase().includes(filter.toLowerCase()) ||
-      l.href.toLowerCase().includes(filter.toLowerCase())
-    );
-    if (filtered.length === 0) {
-      results.innerHTML = '<div style="padding:1em;color:#888;">No results found.</div>';
-      results.style.display = 'block';
-      return;
+
+    function highlightMatches(text, query) {
+        if (!query || !text) return text;
+        const regex = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+        return text.replace(regex, match => `<mark style="background:#f6f3fd;color:#7250ba">${match}</mark>`);
     }
-    results.innerHTML = `
+
+    function renderResults(links, filter = '') {
+        if (!filter) {
+            results.style.display = 'none';
+            results.innerHTML = '';
+            return;
+        }
+        const filtered = links.filter(l =>
+            l.text.toLowerCase().includes(filter.toLowerCase()) ||
+            l.href.toLowerCase().includes(filter.toLowerCase())
+        );
+        if (filtered.length === 0) {
+            results.innerHTML = '<div style="padding:1em;color:#888;">No results found.</div>';
+            results.style.display = 'block';
+            return;
+        }
+        results.innerHTML = `
       <div style="background:#fff;border:1px solid #ece6fa;border-radius:8px;box-shadow:0 2px 8px rgba(114,80,186,0.07);">
         ${filtered.map(l => `
           <a href="${l.href}" style="display:block;padding:0.7em 1em;text-decoration:none;color:#2d2250;border-bottom:1px solid #f3f0fa;">
@@ -770,20 +779,20 @@ document.addEventListener('DOMContentLoaded', function() {
         `).join('')}
       </div>
     `;
-    results.style.display = 'block';
-  }
+        results.style.display = 'block';
+    }
 
-  const links = getSidebarLinks();
+    const links = getSidebarLinks();
 
-  input.addEventListener('input', function() {
-    renderResults(links, input.value.trim());
-  });
+    input.addEventListener('input', function () {
+        renderResults(links, input.value.trim());
+    });
 
-  // Hide results if input is cleared or loses focus (optional)
-  input.addEventListener('blur', function() {
-    setTimeout(() => { results.style.display = 'none'; }, 200);
-  });
-  input.addEventListener('focus', function() {
-    if (input.value.trim()) renderResults(links, input.value.trim());
-  });
+    // Hide results if input is cleared or loses focus (optional)
+    input.addEventListener('blur', function () {
+        setTimeout(() => { results.style.display = 'none'; }, 200);
+    });
+    input.addEventListener('focus', function () {
+        if (input.value.trim()) renderResults(links, input.value.trim());
+    });
 });

@@ -54,8 +54,7 @@
                     <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
                         <li class="Sidebar-item23D-2Kd61_k3 subnav-expanded"><a
                                 class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"
-                                target="_self" href=""
-                                aria-current="page"><span
+                                target="_self" href=""><span
                                     class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                         class="Sidebar-link-text_label1gCT_uPnx7Gu">Creating and
                                         Managing Audiences</span></span><button aria-expanded="true"
