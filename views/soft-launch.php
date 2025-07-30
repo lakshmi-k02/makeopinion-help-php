@@ -88,7 +88,6 @@
             <nav aria-label="Pagination Controls"
                 class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>
         </section>
-        <section class="content-toc grid-25"></section>
     </div>
     <div class="ModalWrapper" id="tutorialmodal-root"></div>
 </article>

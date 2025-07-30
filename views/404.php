@@ -48,6 +48,5 @@
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>
     </section>
-    <section class="content-toc grid-25"></section>
   </div>
 </article>
