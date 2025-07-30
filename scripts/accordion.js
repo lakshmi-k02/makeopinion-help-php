@@ -784,15 +784,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const links = getSidebarLinks();
 
-    input.addEventListener('input', function () {
-        renderResults(links, input.value.trim());
-    });
+    if (input) {
+        input.addEventListener('input', function () {
+            renderResults(links, input.value.trim());
+        });
 
-    // Hide results if input is cleared or loses focus (optional)
-    input.addEventListener('blur', function () {
-        setTimeout(() => { results.style.display = 'none'; }, 200);
-    });
-    input.addEventListener('focus', function () {
-        if (input.value.trim()) renderResults(links, input.value.trim());
-    });
+        input.addEventListener('blur', function () {
+            setTimeout(() => { results.style.display = 'none'; }, 200);
+        });
+        input.addEventListener('focus', function () {
+            if (input.value.trim()) renderResults(links, input.value.trim());
+        });
+    }
 });
