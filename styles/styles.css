@@ -85,7 +85,7 @@
 }
 
 .sidebar-link.active {
-    background-color: #7250ba; /* Using the primary color from the original HTML */
+    background-color: #F0F8FF; /* Using the primary color from the original HTML */
     color: #fff;
     font-weight: bold;
 }
@@ -97,12 +97,12 @@
 
 /* Add this to your CSS file for the nav/sidebar */
 nav {
-  width: 260px;           /* Set a fixed width for the sidebar */
+  width: 320px;           /* Set a fixed width for the sidebar */
   min-width: 200px;
   max-width: 320px;       /* Optional: prevent it from getting too wide */
   white-space: normal;
   word-break: normal;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-x: auto;
 }
 
 .header-wrapper {

@@ -16,53 +16,10 @@
             <div style="margin-left:31px"
                 class="rm-Markdown markdown-body rm-Markdown markdown-body ng-non-bindable"
                 data-testid="RDMD">
-                <h2 class="heading heading-2 header-scroll">
-                    <div class="heading-anchor anchor waypoint" id="exposure"></div>
-                    <div class="heading-text">
-                        <div id="section-exposure" class="heading-anchor_backwardsCompatibility">
-                        </div>What It Does?
-                    </div><a aria-label="Skip link to Exposure"
-                        class="heading-anchor-icon fa fa-anchor" href="#exposure"></a>
-                </h2>
-                <p>Lets you test a project with a limited number of respondents to catch setup issues early.
-                </p>
-                <h2 class="heading heading-2 header-scroll">
-                    <div class="heading-anchor anchor waypoint" id="discovery"></div>
-                    <div class="heading-text">
-                        <div id="section-discovery" class="heading-anchor_backwardsCompatibility">
-                        </div>How to Enable?
-                    </div><a aria-label="Skip link to Discovery"
-                        class="heading-anchor-icon fa fa-anchor" href="#discovery"></a>
-                </h2>
-                <h4>From Create Survey:</h3>
-                    <ul>
-                        <li>Click Start a Project in the upper-right corner of your account.</li>
-                        <li>Choose one of the options: Get Survey Participants, Start a new survey, or Select Survey Templates. </li>
-                    </ul>
-                    <h4>From Edit Survey:</h3>
+                
+                
                         <ul>
-                            <li><strong>Access the Project:</strong> Navigate to the project where you want to enable the soft
-                                launch
-                                feature.
-
-                                <!-- <img src="gifs/soft launch - Click project.gif" alt="Access the Project GIF"
-              style="margin-top: 0px; max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;"> -->
-                            </li>
-                            <li><strong>Select the Audience:</strong> Open the audience you want to configure for the soft launch.
-                            </li>
-                            <li><strong>Edit Audience Settings:</strong>
-                                <ul>
-                                    <li>Go to <strong>Edit Audience</strong>.</li>
-                                    <li>Navigate to the <strong>Scheduling</strong> tab.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Enable Soft Launch:</strong>
-                                <ul>
-                                    <li>Locate the <strong>"Enable Soft Launch"</strong> option and activate it.</li>
-                                    <li>Choose the soft launch type (e.g., clicks or completes).</li>
-                                    <li>Specify the number of clicks or completes required.</li>
-                                </ul>
-                            <li>
+                            
 
                                 <span style="display:block;">
                                     <img src="images/soft_launch.png" alt="Soft Launch Configuration"
@@ -70,8 +27,7 @@
                                         onclick="expandImage(this)">
                                 </span>
                             </li>
-                            <li><strong>Save Changes:</strong> Click <strong>Save</strong> to apply your settings.</li>
-                            <li>Once saved, the soft launch configuration is active.</li>
+
                         </ul>
                         <h2 class="heading heading-2 header-scroll">
                             <div class="heading-anchor anchor waypoint" id="integration-proposal"></div>

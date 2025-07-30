@@ -16,58 +16,7 @@
     <section class="content-body grid-100">
       <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
-        <h2 class="heading heading-2 header-scroll" id="what-it-does">
-          <div class="heading-text">What It Does</div>
-        </h2>
-        <ul>
-          <li>Lets you specify the geographic and response requirements for your project.</li>
-          <li>Essential for distributing your survey to the right demographic.</li>
-        </ul>
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-enable">
-          <div class="heading-text">How to Create and Manage a New Audience</div>
-        </h2>
-
-        <h4>1. Start a New Project</h4>
-        <ul>
-          <li>From the Dashboard, click the <strong>New Project</strong> button.</li>
-          <li>In the new tab that opens, click <strong>Start New Survey</strong>.</li>
-        </ul>
-
-           <span style="display:block;">
-                        <img src="images/createAudience1.png" alt="edit audience"
-                            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
-                            onclick="expandImage(this)">
-                    </span>
-
-        <h4>2. Enter Project Details</h4>
-        <ul>
-          <li>Fill in the project details form:
-            <ul>
-              <li><strong>Project Name</strong></li>
-              <li><strong>Project Description</strong></li>
-              <li><em>Optional: Preferred Currency, Project Manager, etc.</em></li>
-            </ul>
-          </li>
-          <li>Click the <strong>Create Project</strong> button.</li>
-        </ul>
-                <span style="display:block;">
-                        <img src="images/createAudience2.png" alt="edit audience"
-                            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
-                            onclick="expandImage(this)">
-                    </span>
-        <h4>3. Define Your Audience</h4>
-        <ul>
-          <li>On the project page, click the <strong>Create Audience</strong> button to open the configuration window.</li>
-          <li>In the “Create Audience” window:
-            <ul>
-              <li><strong>Country</strong>: Select the target country (e.g., Switzerland).</li>
-              <li><strong>Completes</strong>: Choose how many responses you want (200, 300, 400, etc.).</li>
-              <li><strong>Audience Name</strong>: (Optional) Name the group (e.g., Audience #1).</li>
-            </ul>
-          </li>
-          <li>Click <strong>Continue</strong> to proceed.</li>
-        </ul>
+        
             <span style="display:block;">
                         <img src="images/createAudience4.png" alt="edit audience"
                             style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"

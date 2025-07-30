@@ -16,7 +16,7 @@ include './core/router.php'; // Add this line to include the router
 
 <footer aria-label="Status banner" class="Footer2U8XAPoGhlgO AppFooter rm-Banners"></footer>
 <div class="ModalWrapper"></div>
-<script src="scripts/accordion.js"></script>
+<script src="scripts/accordion.js?sd=1"></script>
 </body>
 
 </html>

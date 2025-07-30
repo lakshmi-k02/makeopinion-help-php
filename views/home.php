@@ -5,7 +5,7 @@
         <h1>Welcome to MakeOpinion Help Center</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
-            <p>Find answers, guides, and resources to help you use MakeOpinion efficiently.</p>
+            <p>Find answers, guides, and resources to help you use MakeOpinion Next like a bo$$.</p>
           </div>
         </div>
       </div>

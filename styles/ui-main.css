@@ -33053,6 +33053,7 @@ footer {
     --color-bg-page-muted: var(--gray20);
     --color-text-default: var(--white);
     --color-text-muted: var(--gray80);
+    --color-text-title: #333D60;
     --color-text-minimum: var(--gray70);
     --color-text-minimum-hover: var(--gray80);
     --color-text-minimum-icon: rgba(173, 180, 193, 0.6);

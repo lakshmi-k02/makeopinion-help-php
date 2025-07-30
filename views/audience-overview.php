@@ -16,32 +16,15 @@
     <section class="content-body grid-100">
       <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
-        <h2 class="heading heading-2 header-scroll" id="what-it-does">
-          <div class="heading-text">What It Does?</div>
-        </h2>
-        <p>Allows you to switch between different predefined audiences (e.g., based on geography, demographics) for a survey project setup.</p>
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-enable">
-          <div class="heading-text">How to Enable?</div>
-        </h2>
-        <h4>From Create Survey:</h4>
+        
         <ul>
-          <li>Click <strong>Start a Project</strong> in the upper-right corner of your account.</li>
-          <li>Choose one of the options: <strong>Get Survey Participants</strong>, <strong>Start a new survey</strong>, or <strong>Select Survey Templates</strong>.</li>
-        </ul>
-
-        <h2 class="heading heading-2 header-scroll" id="where-to-find-it">
-          <div class="heading-text">Where to Find It?</div>
-        </h2>
-        <ul>
-          <li>Go to the <strong>Design</strong> tab of your project.</li>
-          <li>Click <strong>Select Audience</strong> in the top right navigation area.</li>
+          
                   <span style="display:block;">
           <img src="images/NavAudienceList.png" alt="Navigating Audience List"
             style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
             onclick="expandImage(this)">
         </span>
-          <li>A panel will slide open, displaying all configured audiences.</li>
+         
            <span style="display:block;">
           <img src="images/NavAudienceList2.png" alt="Navigating Audience List"
             style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"

@@ -11,11 +11,11 @@
     // Get the current page address
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
-    <link rel="stylesheet" href="/styles/ui-styles.css">  
-    <link rel="stylesheet" href="/styles/ui-header.css">    
-    <link rel="stylesheet" href="/styles/ui-main.css">
-    <link rel="stylesheet" href="/styles/ui-footer.css">
-    <link rel="stylesheet" href="/styles/ui-routes.css">
+    <link rel="stylesheet" href="styles/ui-styles.css">  
+    <link rel="stylesheet" href="styles/ui-header.css">    
+    <link rel="stylesheet" href="styles/ui-main.css">
+    <link rel="stylesheet" href="styles/ui-footer.css">
+    <link rel="stylesheet" href="styles/ui-routes.css">
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- control dark theme and light theme -->

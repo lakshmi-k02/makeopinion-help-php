@@ -3,21 +3,17 @@ function route() {
     // Define all allowed page slugs and their corresponding files
     $allowedPages = [
         'home',
-        'createaudience',
-        'softlaunch',
+        'create-audience',
+        'soft-launch',
         'customdeadlines',
-        'editaudience',
+        'audience-general-settings',
         'scheduledaudience',
         'standardquestions',
-        'navigatingaudiencelist',
         'completionscheduler',
         'audiencerecontacts',
         'audienceelimination',
-        'audiencedetailview',
-        'customscreeningquestions',
-        'enabledisablequotas',
-        'nationalrepresentativequotas',
-        'enablequotas'
+        'audience-overview',
+        'customscreeningquestions'
     ];
 
     $page = $_GET['page'] ?? 'home';
