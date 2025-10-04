@@ -42,7 +42,7 @@
                                 href="https://www.makeopinion.com/en/?" target="_self"><img alt="MakeOpinion"
                                     class="rm-Logo-img  Header-logo-img3YvV4lcGKkeb" src="images/logo.svg" /></a><a
                                 aria-current="page"
-                                class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text rm-Header-top-link_active Header-link2tXYTgXq85zW active"
+                                class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text rm-Header-top-link_active Header-link2tXYTgXq85zW"
                                 href="" target="_self">Documentation</a></div>
                         <div class="rm-Header-left Header-leftADQdGVqx1wqU Header-left_mobile1RG-X93lx6PF">
                             <div><button aria-label="Toggle navigation menu" class="icon-menu menu3d6DYNDa3tk5"

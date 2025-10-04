@@ -2,10 +2,10 @@
   <header id="content-head">
     <div class="row clearfix">
       <div class="col-xs-9">
-        <h1>Navigating the Audience List</h1>
+        <h1>Navigating the Results Page</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
-            <p>Switch between multiple predefined audiences to configure each survey setup independently.</p>
+            <p>View results from all launched survey’s</p>
           </div>
         </div>
       </div>
@@ -41,15 +41,15 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Audience Search Bar</strong></td>
+              <td><strong>Survey Metrics</strong></td>
               <td>Quickly find an audience by typing its name.</td>
             </tr>
             <tr>
-              <td><strong>Audience List</strong></td>
+              <td><strong>User Responses</strong></td>
               <td>Displays flags, labels (e.g., Audience #1), and a settings icon for each audience.</td>
             </tr>
             <tr>
-              <td><strong>⚙️ Settings Icon</strong></td>
+              <td><strong>Select Audience</strong></td>
               <td>Click to configure audience-specific settings such as screening questions and quotas.</td>
             </tr>
           </tbody>
@@ -59,16 +59,16 @@
           <div class="heading-text">How It Behaves</div>
         </h2>
         <ul class="space-y-2">
-          <li>Selecting an audience from the list updates the main panel with that audience’s details (e.g., number of completes, incidence rate, LOI, CPI).</li>
-          <li>Only one audience is shown at a time, allowing focused editing.</li>
-          <li>Any changes are saved per audience and do not impact others unless manually duplicated.</li>
-          <li>The <strong>Pending Launch</strong> status updates individually per audience.</li>
+          <li>Gather insights from projects by audiences</li>
+          <li>Predictions for active projects end date and completes</li>
+          <li>Visual performance graphs</li>
+          <li>Shows real time progress of project</li>
         </ul>
 
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated September 2025</p>
       </div>
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>

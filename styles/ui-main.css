@@ -33517,6 +33517,10 @@ body {
     color: var(--color-text-default)
 }
 
+[data-color-mode="dark"] .App a.active {
+  color: black !important;
+}
+
 @media(prefers-color-scheme: dark) {
     [data-color-mode=auto] .App .rm-LandingPage a,[data-color-mode=system] .App .rm-LandingPage a,[data-color-mode=auto] .App .rm-SuggestedEdits a,[data-color-mode=system] .App .rm-SuggestedEdits a,[data-color-mode=auto] .App .rm-SuggestionDiff a,[data-color-mode=system] .App .rm-SuggestionDiff a,[data-color-mode=auto] .App .rm-Guides a,[data-color-mode=system] .App .rm-Guides a,[data-color-mode=auto] .App .rm-Recipes a,[data-color-mode=system] .App .rm-Recipes a,[data-color-mode=auto] .App .rm-Recipes-modal a,[data-color-mode=system] .App .rm-Recipes-modal a,[data-color-mode=auto] .App .rm-ReferenceMain a,[data-color-mode=system] .App .rm-ReferenceMain a,[data-color-mode=auto] .App .rm-Changelog a,[data-color-mode=system] .App .rm-Changelog a,[data-color-mode=auto] .App .rm-Discuss a,[data-color-mode=system] .App .rm-Discuss a,[data-color-mode=auto] .App .rm-CustomPage a,[data-color-mode=system] .App .rm-CustomPage a {
         color:var(--color-text-default)

@@ -13,7 +13,8 @@ function route() {
         'audiencerecontacts',
         'audienceelimination',
         'audience-overview',
-        'customscreeningquestions'
+        'customscreeningquestions',
+        'navigating-results-page'
     ];
 
     $page = $_GET['page'] ?? 'home';

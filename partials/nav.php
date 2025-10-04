@@ -2,10 +2,26 @@
     class="rm-Sidebar hub-sidebar reference-redesign Nav3C5f8FcjkaHj rm-Sidebar_guides"
     id="hub-sidebar" role="navigation">
     <div class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content">
-       
+
         <div class="space-y-1">
 
             <div class="Sidebar1t2G1ZJq-vU1 rm-Sidebar hub-sidebar-content">
+                <section class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
+                    <h2 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">Results Management</h2>
+                    <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">         
+                        <?php $pagename = "navigating-results-page"; ?>
+                        <li class="Sidebar-item23D-2Kd61_k3">
+                            <a
+                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] == $pagename) ? 'active' : ''; ?>"
+                                target="_self"
+                                href="?page=<?php echo $pagename; ?>">
+                                <span class="Sidebar-link-textLuTE1ySm4Kqn">
+                                    <span class="Sidebar-link-text_label1gCT_uPnx7Gu">Navigating the Results Page</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
                 <section class="Sidebar-listWrapper6Q9_yUrG906C rm-Sidebar-section">
                     <h2 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">My Account
                     </h2>
@@ -52,16 +68,18 @@
                     <h2 class="Sidebar-headingTRQyOa2pk0gh rm-Sidebar-heading">Audience Management
                     </h2>
                     <ul class="Sidebar-list3cZWQLaBf9k8 rm-Sidebar-list">
-                        <?php
-                        $pagename = "audience-overview";
-                        ?>
-                        <li class="Sidebar-item23D-2Kd61_k3"><a
-                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"  <?php echo (isset($_GET['page']) && $_GET['page'] ==  $pagename) ? 'active' : ''; ?>"
-                                target="_self" href="?page=<?php echo $pagename; ?>"
-                                <span
-                                    class="Sidebar-link-textLuTE1ySm4Kqn"><span
-                                        class="Sidebar-link-text_label1gCT_uPnx7Gu">Using the Audience Page</span></span></a>
+                        <?php $pagename = "audience-overview"; ?>
+                        <li class="Sidebar-item23D-2Kd61_k3">
+                            <a
+                                class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link <?php echo (isset($_GET['page']) && $_GET['page'] == $pagename) ? 'active' : ''; ?>"
+                                target="_self"
+                                href="?page=<?php echo $pagename; ?>">
+                                <span class="Sidebar-link-textLuTE1ySm4Kqn">
+                                    <span class="Sidebar-link-text_label1gCT_uPnx7Gu">Using the Audience Page</span>
+                                </span>
+                            </a>
                         </li>
+
                         <li class="Sidebar-item23D-2Kd61_k3 subnav-expanded"><a
                                 class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"
                                 target="_self" href=""
@@ -169,7 +187,7 @@
                                         target="_self" href="?page=<?php echo $pagename; ?>"><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">Standard Screeners</span></span></a></li>
-                                
+
                                 <?php
                                 $pagename = "customscreeningquestions";
                                 ?>
@@ -199,7 +217,7 @@
 
                             </ul>
                         </li>
-                        
+
                         <li class="Sidebar-item23D-2Kd61_k3 subnav-expanded"><a
                                 class="Sidebar-link2Dsha-r-GKh2 Sidebar-link_parent text-wrap rm-Sidebar-link"
                                 target="_self" href=""><span
@@ -220,7 +238,7 @@
                                         target="_self" href="?page=<?php echo $pagename; ?>"><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">Define Quotas</span></span></a></li>
-                                
+
                                 <?php
                                 $pagename = "customscreeningquestions";
                                 ?>
@@ -229,7 +247,7 @@
                                         target="_self" href="?page=<?php echo $pagename; ?>"><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">NatRep Quotas</span></span></a></li>
-                        
+
                                 <?php
                                 $pagename = "audienceelimination";
                                 ?>
@@ -238,7 +256,7 @@
                                         target="_self" href="?page=<?php echo $pagename; ?>"><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">Interlocked Quotas</span></span></a></li>
-                        
+
                                 <?php
                                 $pagename = "audiencerecontacts";
                                 ?>
@@ -247,13 +265,13 @@
                                         target="_self" href="?page=<?php echo $pagename; ?>"><span
                                             class="Sidebar-link-textLuTE1ySm4Kqn"><span
                                                 class="Sidebar-link-text_label1gCT_uPnx7Gu">Pause Quotas</span></span></a></li>
-                        
+
                             </ul>
                         </li>
-                        
+
                     </ul>
                 </section>
-                
+
                 <button aria-label="Hide sidebar navigation" class="Nav-toggle-collapse39KxgTH727KL"
                     type="button"></button>
 </nav>
