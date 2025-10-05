@@ -1,0 +1,11 @@
+/* Hide by default (for larger screens) */
+.mobile-only {
+  display: none;
+}
+
+/* Show only on mobile screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: inline-block; /* or flex, depending on your layout */
+  }
+}

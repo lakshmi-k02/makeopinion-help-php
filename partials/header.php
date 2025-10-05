@@ -11,12 +11,13 @@
     // Get the current page address
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
-    <link rel="stylesheet" href="styles/ui-styles.css">  
-    <link rel="stylesheet" href="styles/ui-header.css">    
+    <link rel="stylesheet" href="styles/ui-styles.css">
+    <link rel="stylesheet" href="styles/ui-header.css">
     <link rel="stylesheet" href="styles/ui-main.css">
     <link rel="stylesheet" href="styles/ui-footer.css">
     <link rel="stylesheet" href="styles/ui-routes.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 
     <!-- control dark theme and light theme -->
     <script>
@@ -45,44 +46,17 @@
                                 class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text rm-Header-top-link_active Header-link2tXYTgXq85zW"
                                 href="" target="_self">Documentation</a></div>
                         <div class="rm-Header-left Header-leftADQdGVqx1wqU Header-left_mobile1RG-X93lx6PF">
-                            <div><button aria-label="Toggle navigation menu" class="icon-menu menu3d6DYNDa3tk5"
-                                    type="button"></button>
-                                <div class="">
-                                    <div class="Flyout95xhYIIoTKtc undefined rm-Flyout" data-testid="flyout">
-                                        <div class="MobileFlyout1hHJpUd-nYkd"><a
-                                                class="rm-MobileFlyout-item NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck- "
-                                                href="/" target="_self"><i
-                                                    class="icon-landing-page-2 NavItem-badge1qOxpfTiALoz rm-Header-bottom-link-icon"></i><span
-                                                    class="NavItem-textSlZuuL489uiw">Home</span></a><a
-                                                aria-current="page"
-                                                class="rm-MobileFlyout-item NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck-  active"
-                                                href="/docs" target="_self"><i
-                                                    class="icon-guides NavItem-badge1qOxpfTiALoz rm-Header-bottom-link-icon"></i><span
-                                                    class="NavItem-textSlZuuL489uiw">Documentation</span></a><a
-                                                class="rm-MobileFlyout-item NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck- "
-                                                href="/changelog" target="_self"><i
-                                                    class="icon-changelog NavItem-badge1qOxpfTiALoz rm-Header-bottom-link-icon"></i><span
-                                                    class="NavItem-textSlZuuL489uiw">Changelog</span></a>
-                                            <hr class="MobileFlyout-divider10xf7R2X1MeW" /><a aria-current="page"
-                                                class="rm-MobileFlyout-item NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck- NavItem_dropdown-muted1xJVuczwGc74 active"
-                                                href="/docs" target="_self">Documentation</a><a
-                                                class="rm-MobileFlyout-item NavItem-item1gDDTqaXGhm1 NavItem-item_mobile1qG3gd-Mkck- NavItem_dropdown-muted1xJVuczwGc74"
-                                                href="" rel="noopener"
-                                                target="_blank" to="">Home</a><a
-                                                class="MobileFlyout-logo3Lq1eTlk1K76 Header-logo1Xy41PtkzbdG rm-Logo"
-                                                href="" target="_self"><img /></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="Header-left-nav2xWPWMNHOGf_"><i
                                     class="icon-guides Header-left-nav-icon10glJKFwewOv"></i>Documentation</div>
                         </div>
-                        <div class="rm-Header-right Header-right21PC2XTT6aMg"><span
+                        <div class="rm-Header-right Header-right21PC2XTT6aMg">
+
+                            <span
                                 class="Header-right_desktop14ja01RUQ7HE"><a
                                     class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text Header-link2tXYTgXq85zW"
                                     href="<?php echo $server; ?>" target="_self"
-                                    to="<?php echo $server; ?>">Home</a></span>
+                                    to="<?php echo $server; ?>">Home</a>
+                            </span>
                             <div class="ThemeToggle-wrapper1M_iJESXCpGR Dropdown Dropdown_closed" data-testid="dropdown-container"><button aria-label="Toggle to dark mode" id="theme-toggle-button" aria-haspopup="dialog" class="Button Button_slate_text Button_sm rm-ThemeToggle ThemeToggle2tVPbUyQbWDo ThemeToggle_active3jPkR2CMm1JP Dropdown-toggle Button_primary" type="button" aria-expanded="false"><svg aria-labelledby="theme-toggle-button" class="Icon ThemeToggle-Icon3g9ZT7pRMwCv" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <title>Moon (Dark Mode)</title>
                                         <path d="M19 14.79C18.8427 16.4922 18.2039 18.1144 17.1582 19.4668C16.1126 20.8192 14.7035 21.8458 13.0957 22.4265C11.4879 23.0073 9.74798 23.1181 8.0795 22.7461C6.41102 22.3741 4.88299 21.5345 3.67423 20.3258C2.46546 19.117 1.62594 17.589 1.25391 15.9205C0.881876 14.252 0.992717 12.5121 1.57346 10.9043C2.1542 9.29651 3.18083 7.88737 4.53321 6.84175C5.8856 5.79614 7.5078 5.15731 9.21 5C8.21341 6.34827 7.73385 8.00945 7.85853 9.68141C7.98322 11.3534 8.70386 12.9251 9.8894 14.1106C11.0749 15.2961 12.6466 16.0168 14.3186 16.1415C15.9906 16.2662 17.6517 15.7866 19 14.79Z"></path>
@@ -98,7 +72,9 @@
                                         <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M1 12H3"></path>
                                         <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M4.22 4.22L5.64 5.64"></path>
                                         <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"></path>
-                                    </svg></button></div>
+                                    </svg></button>
+                            </div>
+                            <button aria-label="Toggle navigation menu" class="icon-menu menu3d6DYNDa3tk5 mobile-only" aria-controls="hub-sidebar" aria-expanded="false" type="button"></button>
                             <div class="Header-searchtb6Foi0-D9Vx"><button aria-label="Search ⌘k"
                                     class="rm-SearchToggle" data-symbol="⌘" id="search-toggle-button">
                                     <div class="rm-SearchToggle-icon icon-search1"></div>
@@ -138,35 +114,35 @@
                     </div>
                 </div>
             </header>
-            
+
             <!-- Search Modal -->
             <div class="rm-SearchModal" id="search-modal">
                 <button class="close-search" id="close-search">×</button>
                 <div class="AlgoliaSearch-Col2ycAQ9JMrSYg">
                     <div class="SearchBox1zrymSLJX6TP">
-                        <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" 
-                            spellcheck="false" tabindex="0" aria-required="false" 
-                            class="Input Input_md Input_touched SearchBox-InputUQZAW9QXMe-c" 
+                        <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off"
+                            spellcheck="false" tabindex="0" aria-required="false"
+                            class="Input Input_md Input_touched SearchBox-InputUQZAW9QXMe-c"
                             type="search" value="" placeholder="Search documentation..." id="search-input">
                     </div>
                     <div class="SearchTabs9v4kr3U2lwvI">
                         <div class="Tabs Tabs-list" role="tablist">
-                            <div aria-label="All" aria-selected="true" 
-                                class="SearchTabs-Tab2715KRxrb5JT Tabs-listItem Tabs-listItem_active" 
+                            <div aria-label="All" aria-selected="true"
+                                class="SearchTabs-Tab2715KRxrb5JT Tabs-listItem Tabs-listItem_active"
                                 role="tab" tabindex="-1">
                                 <span class="SearchTabs-Tab2715KRxrb5JT">
                                     <i class="icon icon-search1"></i>All
                                 </span>
                             </div>
-                            <div aria-label="Guides" aria-selected="false" 
-                                class="SearchTabs-Tab2715KRxrb5JT Tabs-listItem" 
+                            <div aria-label="Guides" aria-selected="false"
+                                class="SearchTabs-Tab2715KRxrb5JT Tabs-listItem"
                                 role="tab" tabindex="-1">
                                 <span class="SearchTabs-Tab2715KRxrb5JT">
                                     <i class="icon icon-guides"></i>Documentation
                                 </span>
                             </div>
-                            <div aria-label="Changelog" aria-selected="false" 
-                                class="SearchTabs-Tab2715KRxrb5JT Tabs-listItem" 
+                            <div aria-label="Changelog" aria-selected="false"
+                                class="SearchTabs-Tab2715KRxrb5JT Tabs-listItem"
                                 role="tab" tabindex="-1">
                                 <span class="SearchTabs-Tab2715KRxrb5JT">
                                     <i class="icon icon-changelog"></i>Changelog
@@ -174,6 +150,6 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
