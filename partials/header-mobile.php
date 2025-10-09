@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html data-wf-domain="makeopinion.com" data-wf-page="64180ac3118cc5475656367e" data-wf-site="64180342570b0dc26c6fd2d1" lang="en" class="w-mod-js w-mod-ix wf-inter-n4-active wf-inter-n5-active wf-inter-n6-active wf-plusjakartasans-n3-active wf-plusjakartasans-n4-active wf-plusjakartasans-n5-active wf-plusjakartasans-n6-active wf-plusjakartasans-n7-active wf-plusjakartasans-n8-active wf-active" data-lt-installed="true">
+<html lang="en" class="w-mod-js w-mod-ix" data-lt-installed="true">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="MakeOpinion Help Center - Find answers, guides, and resources to help you use MakeOpinion Next">
+    <meta name="theme-color" content="#7250ba">
+    
     <?php
     // Dynamically generate base URL
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
@@ -11,13 +16,17 @@
     // Get the current page address
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
-    <link rel="stylesheet" href="styles/ui-styles.css">
-    <link rel="stylesheet" href="styles/ui-header.css">
-    <link rel="stylesheet" href="styles/ui-main.css">
-    <link rel="stylesheet" href="styles/ui-footer.css">
-    <link rel="stylesheet" href="styles/ui-routes.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Modern CSS Framework -->
+    <link rel="stylesheet" href="styles/modern-framework.css">
+    <link rel="stylesheet" href="styles/styles-mobile.css">
+    <link rel="stylesheet" href="styles/responsive-mobile.css">
+    <!-- <link rel="stylesheet" href="styles/ui-styles.css"> -->
+    <!-- <link rel="stylesheet" href="styles/ui-header.css"> -->
+    <!-- <link rel="stylesheet" href="styles/ui-main.css"> -->
+    <!-- <link rel="stylesheet" href="styles/ui-footer.css"> -->
+    <!-- <link rel="stylesheet" href="styles/ui-routes.css"> -->
+    
 
     <!-- control dark theme and light theme -->
     <script>
@@ -29,7 +38,7 @@
 
 <body
     class="body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles reference-layout-row lumosity-normal ">
-    <div id="ssr-top"></div>
+    
     <div id="ssr-main">
         <div class="App ThemeContext ThemeContext_dark ThemeContext_line"
             style="--color-primary:#7250ba;--color-primary-inverse:#fff;--color-primary-alt:#4b2796;--color-primary-darken-10:#5b3d9a;--color-primary-darken-20:#452e76;--color-primary-alpha-25:rgba(114, 80, 186, 0.25);--color-link-primary:#7250ba;--color-link-primary-darken-5:#6644ac;--color-link-primary-darken-10:#5b3d9a;--color-link-primary-darken-20:#452e76;--color-link-primary-alpha-50:rgba(114, 80, 186, 0.5);--color-link-primary-alpha-25:rgba(114, 80, 186, 0.25);--color-link-background:rgba(114, 80, 186, 0.09);--color-link-text:#fff;--color-login-link:#018ef5;--color-login-link-text:#fff;--color-login-link-darken-10:#0171c2;--color-login-link-primary-alpha-50:rgba(1, 142, 245, 0.5)">
@@ -40,7 +49,7 @@
                                 class="Button Button_md rm-JumpTo Header-jumpTo3IWKQXmhSI5D Button_primary">Jump to
                                 Content</a></div>
                         <div class="rm-Header-left Header-leftADQdGVqx1wqU"><a class="rm-Logo Header-logo1Xy41PtkzbdG"
-                                href="https://www.makeopinion.com/en/?" target="_self"><img alt="MakeOpinion"
+                                href="https://www.MakeOpinion.com" target="_self"><img alt="MakeOpinion"
                                     class="rm-Logo-img  Header-logo-img3YvV4lcGKkeb" src="images/logo.svg" /></a><a
                                 aria-current="page"
                                 class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text rm-Header-top-link_active Header-link2tXYTgXq85zW"
@@ -54,26 +63,31 @@
                             <span
                                 class="Header-right_desktop14ja01RUQ7HE"><a
                                     class="Button Button_md rm-Header-link rm-Header-top-link Button_slate_text Header-link2tXYTgXq85zW"
-                                    href="<?php echo $server; ?>" target="_self"
+                                    href="<?php echo $server; ?>?page=home" target="_self"
                                     to="<?php echo $server; ?>">Home</a>
                             </span>
-                            <div class="ThemeToggle-wrapper1M_iJESXCpGR Dropdown Dropdown_closed" data-testid="dropdown-container"><button aria-label="Toggle to dark mode" id="theme-toggle-button" aria-haspopup="dialog" class="Button Button_slate_text Button_sm rm-ThemeToggle ThemeToggle2tVPbUyQbWDo ThemeToggle_active3jPkR2CMm1JP Dropdown-toggle Button_primary" type="button" aria-expanded="false"><svg aria-labelledby="theme-toggle-button" class="Icon ThemeToggle-Icon3g9ZT7pRMwCv" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Moon (Dark Mode)</title>
-                                        <path d="M19 14.79C18.8427 16.4922 18.2039 18.1144 17.1582 19.4668C16.1126 20.8192 14.7035 21.8458 13.0957 22.4265C11.4879 23.0073 9.74798 23.1181 8.0795 22.7461C6.41102 22.3741 4.88299 21.5345 3.67423 20.3258C2.46546 19.117 1.62594 17.589 1.25391 15.9205C0.881876 14.252 0.992717 12.5121 1.57346 10.9043C2.1542 9.29651 3.18083 7.88737 4.53321 6.84175C5.8856 5.79614 7.5078 5.15731 9.21 5C8.21341 6.34827 7.73385 8.00945 7.85853 9.68141C7.98322 11.3534 8.70386 12.9251 9.8894 14.1106C11.0749 15.2961 12.6466 16.0168 14.3186 16.1415C15.9906 16.2662 17.6517 15.7866 19 14.79Z"></path>
-                                        <path class="ThemeToggle-Icon-star3wweJby1gM4w" d="M18.3707 1C18.3707 3.22825 16.2282 5.37069 14 5.37069C16.2282 5.37069 18.3707 7.51313 18.3707 9.74138C18.3707 7.51313 20.5132 5.37069 22.7414 5.37069C20.5132 5.37069 18.3707 3.22825 18.3707 1Z"></path>
-                                    </svg><svg aria-labelledby="theme-toggle-button" class="Icon ThemeToggle-Icon3g9ZT7pRMwCv ThemeToggle-Icon_active18I2-19CkbgD" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Sun (Light Mode)</title>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M12 1V3"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M18.36 5.64L19.78 4.22"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M21 12H23"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M18.36 18.36L19.78 19.78"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M12 21V23"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M4.22 19.78L5.64 18.36"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M1 12H3"></path>
-                                        <path class="ThemeToggle-Icon-ray2ab8_BwBkrTx" d="M4.22 4.22L5.64 5.64"></path>
-                                        <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"></path>
-                                    </svg></button>
-                            </div>
+                            <a class="theme-toggle" href="<?php echo $server; ?>?page=home" aria-label="Go to Help Home">
+                                <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 12l9-8 9 8"></path>
+                                    <path d="M9 22V12h6v10"></path>
+                                </svg>
+                            </a>
+                            <button class="theme-toggle" id="theme-toggle-button" aria-label="Toggle theme" type="button">
+                                <svg class="theme-icon theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg class="theme-icon theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
                             <button aria-label="Toggle navigation menu" class="icon-menu menu3d6DYNDa3tk5 mobile-only" aria-controls="hub-sidebar" aria-expanded="false" type="button"></button>
                             <div class="Header-searchtb6Foi0-D9Vx"><button aria-label="Search ⌘k"
                                     class="rm-SearchToggle" data-symbol="⌘" id="search-toggle-button">

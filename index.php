@@ -1,24 +1,20 @@
-<?php 
-include './partials/header.php'; 
-include './core/router.php'; // Add this line to include the router
+<?php
+require_once __DIR__ . '/vendor/autoload.php';
+$detect = new Detection\MobileDetect;
+if ($detect->isMobile() || $detect->isTablet()) {
+  include './partials/header-mobile.php';
+  include './core/router.php'; // Add this line to include the router
+  include './partials/main-mobile.php';
+} else {
+  include './partials/header-desktop.php';
+  include './core/router.php'; // Add this line to include the router
+  include './partials/main-desktop.php';
+}
 ?>
 
-<main class="rm-Guides">
-  <div class="rm-Container rm-Container_flex">
-    <div id="mobile-overlay" hidden></div>
-    <nav>
-      <?php include './partials/nav.php'; ?>
-    </nav>
-    <article id="main-content">
-      <?php route(); ?>
-    </article>
-  </div>
-</main>
 
-<footer aria-label="Status banner" class="Footer2U8XAPoGhlgO AppFooter rm-Banners"></footer>
-<div class="ModalWrapper"></div>
-<script src="scripts/accordion.js?sd=1"></script>
-<script src="scripts/mobile-nav.js"></script>
-</body>
 
-</html>
+
+
+
+
