@@ -24,10 +24,10 @@
                     </a>
                 </li>
                 <li class="nav-item nav-item-expandable">
-                    <button class="nav-toggle" aria-expanded="true" aria-label="Toggle Account Overview submenu">
+                    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle Account Overview submenu">
                         <span class="nav-link-text">Account Overview</span>
                         <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
+                            <polyline points="9,6 15,12 9,18"></polyline>
                         </svg>
                     </button>
                     <ul class="nav-submenu">
@@ -65,10 +65,10 @@
 
                 <!-- Creating / Edit Audiences -->
                 <li class="nav-item nav-item-expandable">
-                    <button class="nav-toggle" aria-expanded="true" aria-label="Toggle Creating / Edit Audiences submenu">
+                    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle Creating / Edit Audiences submenu">
                         <span class="nav-link-text">Creating / Edit Audiences</span>
                         <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
+                            <polyline points="9,6 15,12 9,18"></polyline>
                         </svg>
                     </button>
                     <ul class="nav-submenu">
@@ -91,10 +91,10 @@
 
                 <!-- Audience Scheduling -->
                 <li class="nav-item nav-item-expandable">
-                    <button class="nav-toggle" aria-expanded="true" aria-label="Toggle Audience Scheduling submenu">
+                    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle Audience Scheduling submenu">
                         <span class="nav-link-text">Audience Scheduling</span>
                         <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
+                            <polyline points="9,6 15,12 9,18"></polyline>
                         </svg>
                     </button>
                     <ul class="nav-submenu">
@@ -131,10 +131,10 @@
 
                 <!-- Audience Targeting -->
                 <li class="nav-item nav-item-expandable">
-                    <button class="nav-toggle" aria-expanded="true" aria-label="Toggle Audience Targeting submenu">
+                    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle Audience Targeting submenu">
                         <span class="nav-link-text">Audience Targeting</span>
                         <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
+                            <polyline points="9,6 15,12 9,18"></polyline>
                         </svg>
                     </button>
                     <ul class="nav-submenu">
@@ -171,10 +171,10 @@
 
                 <!-- Quotas -->
                 <li class="nav-item nav-item-expandable">
-                    <button class="nav-toggle" aria-expanded="true" aria-label="Toggle Quotas submenu">
+                    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle Quotas submenu">
                         <span class="nav-link-text">Quotas</span>
                         <svg class="nav-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
+                            <polyline points="9,6 15,12 9,18"></polyline>
                         </svg>
                     </button>
                     <ul class="nav-submenu">

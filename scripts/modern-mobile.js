@@ -52,6 +52,8 @@ class ModernMobileApp {
 
         // Navigation toggles for expandable sections
         navToggles.forEach(toggle => {
+            // Do not re-bind if another script (modern-nav.js) manages this toggle
+            if (toggle.dataset.managed === 'modern-nav') return;
             toggle.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.toggleNavSection(toggle);

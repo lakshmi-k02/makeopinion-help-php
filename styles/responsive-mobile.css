@@ -22,6 +22,8 @@
   }
 }
 
+/* Mobile-First Responsive Layout */
+
 /* Mobile Layout (320px+) */
 .main-layout {
   min-height: 100vh;

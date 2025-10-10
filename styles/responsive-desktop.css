@@ -1,11 +1,22 @@
-/* Hide by default (for larger screens) */
+/* Mobile-First Responsive Layout */
 .mobile-only {
   display: none;
 }
 
-/* Show only on mobile screens (adjust max-width as needed) */
+.desktop-only {
+  display: none;
+}
+
+/* Show on mobile (up to 768px) */
 @media (max-width: 768px) {
   .mobile-only {
-    display: inline-block; /* or flex, depending on your layout */
+    display: inline-block; /* or flex depending on layout */
+  }
+}
+
+/* Show on desktop (769px and above) */
+@media (min-width: 769px) {
+  .desktop-only {
+    display: inline-block; /* or flex depending on layout */
   }
 }
