@@ -63,7 +63,7 @@
     <!-- Main Content -->
     <article class="main-content" id="main-content">
       <div class="content-wrapper">
-        <?php route(); ?>
+         <?php include './core/router.php'; ?>
       </div>
     </article>
   </div>

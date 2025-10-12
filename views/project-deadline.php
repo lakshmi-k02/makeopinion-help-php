@@ -14,7 +14,7 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
         <h2 class="heading heading-2 header-scroll" id="what-it-does">
           <div class="heading-text">What It Does</div>
@@ -39,7 +39,7 @@
           <li>On the project page, locate and click on the <strong>Custom Deadlines</strong> button (usually at the bottom or in the project controls).</li>
           <span style="display:block;">
           <img src="images/CustomDeadline.png" alt="Custom Deadlines"
-            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            class="screenshot-image"
             onclick="expandImage(this)">
         </span>
         </ul>
@@ -59,7 +59,7 @@
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
         </h2>
-        <table>
+        <table class="modern-table">
           <thead>
             <tr>
               <th>Field</th>
@@ -94,7 +94,7 @@
         <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
           <div class="heading-text">How It Behaves</div>
         </h2>
-        <ul>
+        <ul class="modern-list">
           <li>Once enabled, each audience’s start and end times are enforced independently.</li>
           <li>Allows staggered or region-specific deployments.</li>
           <li>Deadlines can be edited at any time during the project lifecycle.</li>
@@ -103,7 +103,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
       </div>
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>

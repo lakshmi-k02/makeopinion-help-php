@@ -20,7 +20,7 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
         <h2 class="heading heading-2 header-scroll" id="how-to-enable">
           <div class="heading-text">How to Enable?</div>
@@ -30,7 +30,7 @@
           <li>Go to the <strong>Recontacts</strong> tab.</li>
           <span style="display:block;">
           <img src="images/audiencerecontacts.png" alt="Audience Recontacts"
-            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            class="screenshot-image"
             onclick="expandImage(this)">
         </span>
           <li>Toggle the <strong>Enabled</strong> switch.</li>
@@ -52,7 +52,7 @@
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
         </h2>
-        <table>
+        <table class="modern-table">
           <thead>
             <tr>
               <th>Field</th>
@@ -86,7 +86,7 @@
         <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
           <div class="heading-text">How It Behaves</div>
         </h2>
-        <ul class="space-y-2">
+        <ul class="space-y-2 modern-list">
           <li>Once enabled and saved, Recontacts are locked in for the current project configuration.</li>
           <li>If using previous sources, only users from the selected audience will be recontacted.</li>
           <li>Uploads are validated and visible in the “User List” section.</li>
@@ -97,7 +97,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
       </div>
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>

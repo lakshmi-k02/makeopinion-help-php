@@ -14,13 +14,11 @@
 
     <div class="grid-container-fluid" id="content-container">
         <section class="content-body grid-100">
-            <div style="margin-left:31px" class="rm-Markdown markdown-body rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
-
-                
-                <ul>
+            <div class="rm-Markdown markdown-body rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+                <ul class="modern-list">
                     <span style="display:block">
                         <img src="images/EditAudience2.png" alt="edit audience"
-                            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+                            class="screenshot-image"
                             onclick="expandImage(this)">
                     </span>
                 </ul>
@@ -32,7 +30,7 @@
                     </div>
                     <a class="heading-anchor-icon fa fa-anchor" href="#fields"></a>
                 </h2>
-                <table>
+                <table class="modern-table">
                     <thead>
                         <tr>
                             <th>Field</th>
@@ -81,7 +79,7 @@
                     </div>
                     <a class="heading-anchor-icon fa fa-anchor" href="#behavior"></a>
                 </h2>
-                <ul class="space-y-2">
+                <ul class="space-y-2 modern-list">
                     <li>Changes apply only to the selected audience.</li>
                     <li>CPI, LOI, and incidence directly affect pricing and feasibility.</li>
                     <li>Users can create multiple audiences with separate settings for A/B or multi-market testing.</li>

@@ -14,17 +14,17 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
         <ul>
           <span style="display:block;">
             <img src="images/NavAudienceList.png" alt="Navigating Audience List"
-              style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+              class="screenshot-image"
               onclick="expandImage(this)">
           </span>
 
           <span style="display:block;">
             <img src="images/NavAudienceList2.png" alt="Navigating Audience List"
-              style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+              class="screenshot-image"
               onclick="expandImage(this)">
           </span>
         </ul>
@@ -32,7 +32,7 @@
         <h2 class="heading heading-2 header-scroll" id="key-components">
           <div class="heading-text">Key Components</div>
         </h2>
-        <table>
+        <table class="modern-table">
           <thead>
             <tr>
               <th>Component</th>
@@ -58,7 +58,7 @@
         <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
           <div class="heading-text">How It Behaves</div>
         </h2>
-        <ul class="space-y-2">
+        <ul class="space-y-2 modern-list">
           <li>Gather insights from projects by audiences</li>
           <li>Predictions for active projects end date and completes</li>
           <li>Visual performance graphs</li>
@@ -68,7 +68,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated September 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
       </div>
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>

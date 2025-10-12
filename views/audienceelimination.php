@@ -15,7 +15,7 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
         <h2 class="heading heading-2 header-scroll" id="how-to-enable">
           <div class="heading-text">How to Enable?</div>
@@ -25,12 +25,12 @@
           <li><strong>Access the Project</strong>: Open the survey project you’re working on.</li>
           <li><strong>Select the Audience</strong>: Use the “Select Audience” dropdown to choose your audience.</li>
           <li><strong>Edit Audience Settings</strong>:
-            <ul>
+            <ul class="space-y-2">
               <li>Click the <strong>⚙️ Edit Audience</strong> icon next to the add new audience.</li>
               <li>Navigate to the <strong>Eliminations</strong> tab.</li>
                    <span style="display:block;">
           <img src="images/AudienceEliminations.png" alt="Audience Eliminations"
-            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            class="screenshot-image"
             onclick="expandImage(this)">
         </span>
             </ul>
@@ -38,7 +38,7 @@
         </ul>
 
         <p><strong>Enable Eliminations:</strong></p>
-        <ul>
+        <ul class="space-y-2">
           <li>Turn the <strong>Eliminations</strong> toggle to <strong>Enabled</strong>.</li>
           <li>Choose one or both of the following:
             <ul>
@@ -52,7 +52,7 @@
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
         </h2>
-        <table>
+        <table class="modern-table">
           <thead>
             <tr>
               <th>Field</th>
@@ -82,7 +82,7 @@
         <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
           <div class="heading-text">How It Behaves</div>
         </h2>
-        <ul class="space-y-2">
+        <ul class="space-y-2 modern-list">
           <li>Respondents included in selected audiences or uploaded files are <strong>automatically excluded</strong> from participation.</li>
           <li>Eliminations apply <strong>only to the selected audience</strong>, not the whole project.</li>
           <li>Eliminated users won’t see or access the survey during fielding.</li>
@@ -92,7 +92,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
       </div>
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>

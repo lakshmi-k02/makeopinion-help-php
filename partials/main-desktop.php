@@ -5,7 +5,7 @@
       <?php include './partials/nav-desktop.php'; ?>
     </nav>
     <article id="main-content">
-      <?php route(); ?>
+        <?php include './core/router.php'; ?>
     </article>
   </div>
 </main>

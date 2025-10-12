@@ -14,7 +14,7 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
         <h2 class="heading heading-2 header-scroll" id="what-it-does">
           <div class="heading-text">What It Does?</div>
@@ -44,7 +44,7 @@
           <li>Locate the “Completion Scheduler” section.</li>
                <span style="display:block;">
           <img src="images/CompletionScheduler.png" alt="Completion Scheduler"
-            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            class="screenshot-image"
             onclick="expandImage(this)">
         </span>
           <li>Activate it using the toggle.</li>
@@ -57,7 +57,7 @@
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
         </h2>
-        <table>
+        <table class="modern-table">
           <thead>
             <tr>
               <th>Field</th>
@@ -92,7 +92,7 @@
         <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
           <div class="heading-text">How It Behaves</div>
         </h2>
-        <ul class="space-y-2">
+        <ul class="space-y-2 modern-list">
           <li>Pacing starts once the audience is launched.</li>
           <li>Responses are collected based on the specified interval and cap.</li>
           <li>If the interval cap is reached, data collection pauses until the next interval.</li>

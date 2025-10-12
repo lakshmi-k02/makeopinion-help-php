@@ -14,7 +14,7 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
         <h2 class="heading heading-2 header-scroll" id="how-to-enable">
           <div class="heading-text">How to Enable?</div>
@@ -25,7 +25,7 @@
           <li>In the pop-up that appears, scroll to the bottom and select the <strong>CUSTOM</strong> option in the Standard Questions Library.</li>
                <span style="display:block;">
           <img src="images/CustomScreeningQuestions.png" alt="Custom Screening Questions"
-            style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+            class="screenshot-image"
             onclick="expandImage(this)">
         </span>
           <li>Click <strong>Create New Question</strong>.</li>
@@ -44,7 +44,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
       </div>
       <hr class="NextStepsDivider" />
       <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>

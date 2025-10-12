@@ -10,13 +10,38 @@
 /* Show on mobile (up to 768px) */
 @media (max-width: 768px) {
   .mobile-only {
-    display: inline-block; /* or flex depending on layout */
+    display: inline-block;
+    /* or flex depending on layout */
   }
 }
 
-/* Show on desktop (769px and above) */
 @media (min-width: 769px) {
-  .desktop-only {
-    display: inline-block; /* or flex depending on layout */
+
+  /* Ensure spacing on main container */
+  .content-block {
+    margin-left: 31px !important;
+    /* Use !important to prevent overrides */
+  }
+
+  /* Wrap image correctly */
+  .image-wrapper {
+    display: block !important;
+  }
+
+  /* Target all screenshots safely */
+  img.screenshot-image {
+    margin-top: 10px !important;
+    max-width: 60% !important;
+    height: 60% !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: box-shadow 0.2s !important;
+    display: inline-block !important;
+  }
+
+  /* Optional hover effect for clarity */
+  img.screenshot-image:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25) !important;
   }
 }

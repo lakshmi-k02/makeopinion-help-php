@@ -14,17 +14,17 @@
 
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
-      <div style="margin-left:31px" class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
+      <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
         <ul>
           <span style="display:block;">
             <img src="images/NavAudienceList.png" alt="Navigating Audience List"
-              style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+              class="screenshot-image"
               onclick="expandImage(this)">
           </span>
 
           <span style="display:block;">
             <img src="images/NavAudienceList2.png" alt="Navigating Audience List"
-              style="margin-top: 10px; max-width: 60%; height:60%; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; transition: box-shadow 0.2s;"
+              class="screenshot-image"
               onclick="expandImage(this)">
           </span>
         </ul>
@@ -32,7 +32,7 @@
         <h2 class="heading heading-2 header-scroll" id="key-components">
           <div class="heading-text">Key Components</div>
         </h2>
-        <table>
+        <table class="modern-table">
           <thead>
             <tr>
               <th>Component</th>
@@ -58,7 +58,7 @@
         <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
           <div class="heading-text">How It Behaves</div>
         </h2>
-        <ul class="space-y-2">
+        <ul class="space-y-2 modern-list">
           <li>Selecting an audience from the list updates the main panel with that audience’s details (e.g., number of completes, incidence rate, LOI, CPI).</li>
           <li>Only one audience is shown at a time, allowing focused editing.</li>
           <li>Any changes are saved per audience and do not impact others unless manually duplicated.</li>
