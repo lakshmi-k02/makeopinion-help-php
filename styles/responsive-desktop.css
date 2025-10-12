@@ -16,6 +16,12 @@
 }
 
 @media (min-width: 769px) {
+  .desktop-only {
+    display: inline-block;
+    /* or flex depending on layout */
+  }
+}
+@media (min-width: 769px) {
 
   /* Ensure spacing on main container */
   .content-block {

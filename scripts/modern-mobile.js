@@ -201,6 +201,15 @@ class ModernMobileApp {
         const searchForm = document.getElementById('inline-search-form');
         const searchResults = document.getElementById('inline-search-results');
 
+        // Also wire the global search modal input (used on mobile/header)
+        const modalSearchInput = document.getElementById('search-input');
+        const searchModal = document.getElementById('search-modal');
+        const searchToggleButtons = document.querySelectorAll('[id*="search-toggle-button"]');
+        const closeSearchButton = document.getElementById('close-search');
+
+        // Initialize search data
+        this.initializeSearchData();
+
         if (searchInput && searchForm) {
             // Search input focus handling
             searchInput.addEventListener('focus', () => {
@@ -232,14 +241,242 @@ class ModernMobileApp {
                 }
             });
         }
+
+        // Mobile search modal functionality
+        if (modalSearchInput && searchModal) {
+            // Search toggle buttons
+            searchToggleButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.openSearchModal();
+                });
+            });
+
+            // Close search modal
+            if (closeSearchButton) {
+                closeSearchButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.closeSearchModal();
+                });
+            }
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && searchModal.classList.contains('open')) {
+                    this.closeSearchModal();
+                }
+            });
+
+            // Close on backdrop click
+            searchModal.addEventListener('click', (e) => {
+                if (e.target === searchModal) {
+                    this.closeSearchModal();
+                }
+            });
+
+            // Real-time search in modal
+            let modalSearchTimeout;
+            modalSearchInput.addEventListener('input', (e) => {
+                clearTimeout(modalSearchTimeout);
+                const query = e.target.value.trim();
+                
+                if (query.length > 1) {
+                    modalSearchTimeout = setTimeout(() => {
+                        this.showModalSearchResults(query);
+                    }, 200);
+                } else {
+                    this.hideModalSearchResults();
+                }
+            });
+
+            // Handle Enter key in modal search
+            modalSearchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const query = e.target.value.trim();
+                    if (query) {
+                        this.performSearch(query);
+                        this.closeSearchModal();
+                    }
+                }
+            });
+        }
+    }
+
+    /**
+     * Initialize search data from navigation structure
+     */
+    initializeSearchData() {
+        this.searchData = [
+            // Results Management
+            { title: "Navigating the Results Page", page: "navigating-results-page", section: "Results Management", keywords: ["results", "navigation", "page", "view"] },
+            
+            // My Account
+            { title: "Account Settings", page: "account-settings", section: "My Account", keywords: ["account", "settings", "profile"] },
+            { title: "Project Overview", page: "project-overview", section: "My Account", keywords: ["project", "overview", "dashboard"] },
+            { title: "Team Performance", page: "team-performance", section: "My Account", keywords: ["team", "performance", "stats"] },
+            { title: "Sample Performance", page: "sample-performance", section: "My Account", keywords: ["sample", "performance", "quality"] },
+            
+            // Audience Management
+            { title: "Using the Audience Page", page: "audience-overview", section: "Audience Management", keywords: ["audience", "page", "overview", "using"] },
+            { title: "Create Audience", page: "create-audience", section: "Audience Management", keywords: ["create", "audience", "new", "setup"] },
+            { title: "General Settings", page: "audience-general-settings", section: "Audience Management", keywords: ["general", "settings", "audience", "configuration"] },
+            { title: "Audience Detail View", page: "x_audiencedetailview", section: "Audience Management", keywords: ["audience", "detail", "view", "specific"] },
+            { title: "Standard Screeners", page: "standardquestions", section: "Audience Management", keywords: ["standard", "screeners", "questions", "default"] },
+            { title: "Custom Screeners", page: "customscreeningquestions", section: "Audience Management", keywords: ["custom", "screeners", "questions", "personalized"] },
+            { title: "Audience Eliminations", page: "audienceelimination", section: "Audience Management", keywords: ["audience", "eliminations", "remove", "exclude"] },
+            { title: "Audience Recontacts", page: "audiencerecontacts", section: "Audience Management", keywords: ["audience", "recontacts", "follow-up", "repeat"] },
+            { title: "Define Quotas", page: "quotas", section: "Audience Management", keywords: ["define", "quotas", "limits", "targets"] },
+            { title: "NatRep Quotas", page: "national-representativity-quotas", section: "Audience Management", keywords: ["natrep", "quotas", "national", "representativity"] },
+            { title: "NatRep Regional", page: "natrep-regional", section: "Audience Management", keywords: ["natrep", "regional", "geographic", "location"] },
+            { title: "Interlocked Quotas", page: "interlocked-quotas", section: "Audience Management", keywords: ["interlocked", "quotas", "linked", "connected"] },
+            { title: "Pause Quotas", page: "pausequotas", section: "Audience Management", keywords: ["pause", "quotas", "stop", "suspend"] },
+            { title: "Soft Launch", page: "soft-launch", section: "Audience Management", keywords: ["soft", "launch", "test", "pilot"] },
+            { title: "Project Deadlines", page: "project-deadline", section: "Audience Management", keywords: ["project", "deadlines", "due", "dates"] },
+            { title: "Start Stop Time", page: "scheduledaudience", section: "Audience Management", keywords: ["start", "stop", "time", "schedule"] },
+            { title: "Response Limits", page: "completionscheduler", section: "Audience Management", keywords: ["response", "limits", "completion", "scheduler"] }
+        ];
+    }
+
+    /**
+     * Search modal functionality
+     */
+    openSearchModal() {
+        const searchModal = document.getElementById('search-modal');
+        const searchInput = document.getElementById('search-input');
+        
+        if (searchModal) {
+            searchModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus search input after modal opens
+            setTimeout(() => {
+                if (searchInput) {
+                    searchInput.focus();
+                }
+            }, 100);
+        }
+    }
+
+    closeSearchModal() {
+        const searchModal = document.getElementById('search-modal');
+        const searchInput = document.getElementById('search-input');
+        
+        if (searchModal) {
+            searchModal.classList.remove('open');
+            document.body.style.overflow = '';
+            
+            // Clear search input and results
+            if (searchInput) {
+                searchInput.value = '';
+            }
+            this.hideModalSearchResults();
+        }
+    }
+
+    /**
+     * Show search results in modal
+     */
+    showModalSearchResults(query) {
+        const results = this.searchData.filter(item => {
+            const searchText = `${item.title} ${item.section} ${item.keywords.join(' ')}`.toLowerCase();
+            return searchText.includes(query.toLowerCase());
+        });
+
+        this.renderModalSearchResults(results, query);
+    }
+
+    /**
+     * Hide search results in modal
+     */
+    hideModalSearchResults() {
+        const resultsContainer = document.getElementById('search-results-container');
+        if (resultsContainer) {
+            resultsContainer.innerHTML = '';
+            resultsContainer.style.display = 'none';
+        }
+    }
+
+    /**
+     * Render search results in modal
+     */
+    renderModalSearchResults(results, query) {
+        let resultsContainer = document.getElementById('search-results-container');
+        
+        if (!resultsContainer) {
+            // Create results container if it doesn't exist
+            resultsContainer = document.createElement('div');
+            resultsContainer.id = 'search-results-container';
+            resultsContainer.className = 'search-results-container';
+            
+            const searchBox = document.querySelector('.SearchBox1zrymSLJX6TP');
+            if (searchBox && searchBox.parentNode) {
+                searchBox.parentNode.insertBefore(resultsContainer, searchBox.nextSibling);
+            }
+        }
+
+        if (results.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="search-no-results">
+                    <div class="search-no-results-icon">🔍</div>
+                    <div class="search-no-results-text">No results found for "${query}"</div>
+                    <div class="search-no-results-suggestion">Try different keywords or check spelling</div>
+                </div>
+            `;
+        } else {
+            const resultsHtml = results.map(item => `
+                <div class="search-result-item" data-page="${item.page}">
+                    <div class="search-result-title">${this.highlightSearchTerm(item.title, query)}</div>
+                    <div class="search-result-section">${item.section}</div>
+                    <div class="search-result-keywords">${item.keywords.slice(0, 3).join(', ')}</div>
+                </div>
+            `).join('');
+
+            resultsContainer.innerHTML = `
+                <div class="search-results-header">
+                    <div class="search-results-count">${results.length} result${results.length !== 1 ? 's' : ''} found</div>
+                </div>
+                <div class="search-results-list">
+                    ${resultsHtml}
+                </div>
+            `;
+
+            // Add click handlers to result items
+            resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const page = item.dataset.page;
+                    this.navigateToPage(page);
+                    this.closeSearchModal();
+                });
+            });
+        }
+
+        resultsContainer.style.display = 'block';
+    }
+
+    /**
+     * Highlight search terms in text
+     */
+    highlightSearchTerm(text, query) {
+        if (!query) return text;
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+    }
+
+    /**
+     * Navigate to a specific page
+     */
+    navigateToPage(page) {
+        const currentUrl = new URL(window.location);
+        currentUrl.searchParams.set('page', page);
+        window.location.href = currentUrl.toString();
     }
 
     performSearch(query) {
         if (query.trim()) {
-            // Basic search implementation - can be enhanced with actual search logic
-            console.log('Searching for:', query);
-            // Here you would implement actual search functionality
-            this.showSearchResults(query);
+            // Navigate to server-side search route so results can be rendered
+            const url = window.location.pathname + '?page=search&q=' + encodeURIComponent(query.trim());
+            window.location.href = url;
         }
     }
 

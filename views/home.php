@@ -34,7 +34,7 @@
       </div>
 
       <div class="UpdatedAt">
-        <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+        <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
       </div>
 
       <hr class="NextStepsDivider" />
@@ -162,7 +162,7 @@
       <div class="topic-category">
         <h3 class="category-title">Scheduling & Timing</h3>
         <ul class="topic-list">
-          <li><a href="?page=customdeadlines" class="topic-link">Project Deadlines</a></li>
+          <li><a href="?page=project-deadline" class="topic-link">Project Deadlines</a></li>
           <li><a href="?page=scheduledaudience" class="topic-link">Start/Stop Times</a></li>
           <li><a href="?page=completionscheduler" class="topic-link">Response Limits</a></li>
         </ul>
@@ -178,7 +178,7 @@
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12,6 12,12 16,14"></polyline>
         </svg>
-        Last updated: June 2025
+        Last updated: October 2025
       </p>
     </div>
   </footer>
