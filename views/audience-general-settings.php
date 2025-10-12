@@ -88,7 +88,7 @@
             </div>
 
             <div class="UpdatedAt">
-                <p class="DateLine"><i class="icon icon-watch"></i>Updated June 2025</p>
+                <p class="DateLine"><i class="icon icon-watch"></i>Updated October 2025</p>
             </div>
 
             <hr class="NextStepsDivider" />

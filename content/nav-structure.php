@@ -47,8 +47,9 @@ $nav_items = [
                 "label" => "Quotas",
                 "submenu" => [
                     ["label" => "Define Quotas", "page" => "quotas"],
-                    ["label" => "NatRep Quotas", "page" => "natrepquotas"],
-                    ["label" => "Interlocked Quotas", "page" => "interlockedquotas"],
+                    ["label" => "NatRep Quotas", "page" => "national-representativity-quotas"],
+                    ["label" => "NatRep Regional", "page" => "natrep-regional"],
+                    ["label" => "Interlocked Quotas", "page" => "interlocked-quotas"],
                     ["label" => "Pause Quotas", "page" => "pausequotas"]
                 ]
             ],
