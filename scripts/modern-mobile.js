@@ -418,7 +418,7 @@ class ModernMobileApp {
         if (results.length === 0) {
             resultsContainer.innerHTML = `
                 <div class="search-no-results">
-                    <div class="search-no-results-icon">🔍</div>
+                    <div class="search-no-results-icon">ðŸ”</div>
                     <div class="search-no-results-text">No results found for "${query}"</div>
                     <div class="search-no-results-suggestion">Try different keywords or check spelling</div>
                 </div>

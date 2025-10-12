@@ -136,9 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getSidebarLinks() {
         const nav = document.getElementById('hub-sidebar');
-        if (!nav) return [];
+        let allLinks;
 
-        const allLinks = nav.querySelectorAll('a[href]');
+        // If the main sidebar isn't present (mobile or homepage), fall back to collecting
+        // anchors from the current document which reference pages (e.g. ?page=...)
+        if (nav) {
+            allLinks = nav.querySelectorAll('a[href]');
+        } else {
+            allLinks = document.querySelectorAll('a[href*="?page="] , a[href*="page="]');
+        }
+
+        if (!allLinks || allLinks.length === 0) return [];
+
         return Array.from(allLinks).map(link => {
             // Optional: add indentation for subpages based on nesting depth
             let depth = 0;
@@ -147,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (parent.tagName.toLowerCase() === 'ul') depth++;
                 parent = parent.parentElement;
             }
-
             return {
                 href: link.getAttribute('href'),
                 text: link.textContent.trim() || link.getAttribute('href'),
@@ -355,8 +363,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Helper to get sidebar links (same as in accordion.js)
     function getSidebarLinks() {
         const nav = document.getElementById('hub-sidebar');
-        if (!nav) return [];
-        const links = nav.querySelectorAll('a[href]');
+        let links;
+
+        if (nav) {
+            links = nav.querySelectorAll('a[href]');
+        } else {
+            // Fallback: collect page links that reference ?page=... so searches on home work
+            links = document.querySelectorAll('a[href*="?page="] , a[href*="page="]');
+        }
+
+        if (!links || links.length === 0) return [];
         return Array.from(links).map(link => ({
             href: link.getAttribute('href'),
             text: link.textContent.trim() || link.getAttribute('href')
