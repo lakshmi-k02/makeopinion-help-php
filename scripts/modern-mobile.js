@@ -52,12 +52,10 @@ class ModernMobileApp {
 
         // Navigation toggles for expandable sections
         navToggles.forEach(toggle => {
-            // Do not re-bind if another script (modern-nav.js) manages this toggle
-            if (toggle.dataset.managed === 'modern-nav') return;
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.toggleNavSection(toggle);
-            });
+            // Navigation expand/collapse is handled by `mobile-nav.js`.
+            // We intentionally don't bind click handlers here to avoid duplicate listeners
+            // or conflicting behavior. If a toggle isn't managed by the dedicated script,
+            // `mobile-nav.js` will still initialize it when present.
         });
 
         // Close mobile menu on window resize if desktop
