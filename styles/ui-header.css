@@ -18,6 +18,12 @@
     transition: transform 220ms ease-in-out;
     z-index: 1000;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* smooth native scrolling on iOS */
+    /* Respect the device safe-area (home indicator) so the last nav item isn't hidden */
+    padding-bottom: env(safe-area-inset-bottom);
+    /* Fallback for older iOS */
+    padding-bottom: constant(safe-area-inset-bottom);
+    box-sizing: border-box;
   }
   #hub-sidebar.is-open{
     transform: translateX(0);

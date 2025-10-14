@@ -162,6 +162,20 @@
   }
 }
 
+/* Make sure the mobile nav content has extra safe-area spacing at the bottom so items
+   aren't hidden behind the iPhone home indicator or similar UI. */
+@media (max-width: 1200px) {
+  .modern-nav {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+    padding-bottom: constant(safe-area-inset-bottom, 16px);
+    box-sizing: border-box;
+  }
+  /* ensure the container can scroll to reveal the padded area */
+  .nav-sections {
+    padding-bottom: calc(var(--space-6, 24px) + env(safe-area-inset-bottom, 16px));
+  }
+}
+
 /* Dark mode navigation styles */
 [data-color-mode="dark"] .nav-section-title {
   color: var(--dark-text-secondary);

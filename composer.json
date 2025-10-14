@@ -1,11 +1,13 @@
 {
-    "require": {
-        "mobiledetect/mobiledetectlib": "^4.8"
-    },
-    "config": {
-        "platform-check": false,
-        "platform": {
-            "php": "8.4.8"
-        }
+  "require": {
+    "php": "^7.4",
+    "mobiledetect/mobiledetectlib": "^3.74"
+  },
+  "config": {
+    "platform-check": false,
+    "platform": {
+      "php": "7.4.33"
     }
+  }
 }
+
