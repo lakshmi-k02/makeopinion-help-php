@@ -55,7 +55,8 @@
           </button>
         </div>
       </div>
-      <nav class="sidebar-nav">
+      <nav class="sidebar-nav" style="
+    padding-bottom: 80px;">
         <?php include './partials/nav-mobile.php'; ?>
       </nav>
     </aside>
