@@ -11,6 +11,7 @@
     // Get the current page address
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
+    <title>Help-Center</title>
     <link rel="stylesheet" href="styles/ui-styles.css">
     <link rel="stylesheet" href="styles/ui-header.css">
     <link rel="stylesheet" href="styles/ui-main.css">

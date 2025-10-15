@@ -16,6 +16,7 @@
     // Get the current page address
     $current_page = $_SERVER['REQUEST_URI'];
     ?>
+    <title>Help-Center</title>
     
     <!-- Modern CSS Framework -->
     <link rel="stylesheet" href="styles/modern-framework.css">
