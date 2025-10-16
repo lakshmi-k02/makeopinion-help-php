@@ -37,7 +37,7 @@
 
     <!-- Mobile JavaScript -->
     <!-- <script src="scripts/accordion.js"></script> -->
-    <script src="scripts/modern-mobile.js"></script>
+    <!-- <script src="scripts/modern-mobile.js"></script> -->
 
 </head>
 

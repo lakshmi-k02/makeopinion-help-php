@@ -15,6 +15,21 @@
   }
 }
 
+/* Ensure mobile-only content stays visible on handheld devices in landscape
+   where the viewport width may exceed 768px but the available height is
+   limited (common on phones turned sideways). This preserves the mobile
+   layout for actual handheld devices while allowing desktop/tablet layouts
+   to continue behaving the same. */
+@media (orientation: landscape) and (max-height: 768px) {
+  .mobile-only {
+    display: block !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 /* Show on desktop (769px and above) */
 @media (min-width: 769px) {
   .desktop-only {

@@ -52,10 +52,12 @@ class ModernMobileApp {
 
         // Navigation toggles for expandable sections
         navToggles.forEach(toggle => {
-            // Navigation expand/collapse is handled by `mobile-nav.js`.
-            // We intentionally don't bind click handlers here to avoid duplicate listeners
-            // or conflicting behavior. If a toggle isn't managed by the dedicated script,
-            // `mobile-nav.js` will still initialize it when present.
+            // Do not re-bind if another script (modern-nav.js) manages this toggle
+            if (toggle.dataset.managed === 'modern-nav') return;
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.toggleNavSection(toggle);
+            });
         });
 
         // Close mobile menu on window resize if desktop
@@ -199,15 +201,6 @@ class ModernMobileApp {
         const searchForm = document.getElementById('inline-search-form');
         const searchResults = document.getElementById('inline-search-results');
 
-        // Also wire the global search modal input (used on mobile/header)
-        const modalSearchInput = document.getElementById('search-input');
-        const searchModal = document.getElementById('search-modal');
-        const searchToggleButtons = document.querySelectorAll('[id*="search-toggle-button"]');
-        const closeSearchButton = document.getElementById('close-search');
-
-        // Initialize search data
-        this.initializeSearchData();
-
         if (searchInput && searchForm) {
             // Search input focus handling
             searchInput.addEventListener('focus', () => {
@@ -239,257 +232,137 @@ class ModernMobileApp {
                 }
             });
         }
-
-        // Mobile search modal functionality
-        if (modalSearchInput && searchModal) {
-            // Search toggle buttons
-            searchToggleButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    this.openSearchModal();
-                });
-            });
-
-            // Close search modal
-            if (closeSearchButton) {
-                closeSearchButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    this.closeSearchModal();
-                });
-            }
-
-            // Close on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && searchModal.classList.contains('open')) {
-                    this.closeSearchModal();
-                }
-            });
-
-            // Close on backdrop click
-            searchModal.addEventListener('click', (e) => {
-                if (e.target === searchModal) {
-                    this.closeSearchModal();
-                }
-            });
-
-            // Real-time search in modal
-            let modalSearchTimeout;
-            modalSearchInput.addEventListener('input', (e) => {
-                clearTimeout(modalSearchTimeout);
-                const query = e.target.value.trim();
-                
-                if (query.length > 1) {
-                    modalSearchTimeout = setTimeout(() => {
-                        this.showModalSearchResults(query);
-                    }, 200);
-                } else {
-                    this.hideModalSearchResults();
-                }
-            });
-
-            // Handle Enter key in modal search
-            modalSearchInput.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    const query = e.target.value.trim();
-                    if (query) {
-                        this.performSearch(query);
-                        this.closeSearchModal();
-                    }
-                }
-            });
-        }
     }
 
-    /**
-     * Initialize search data from navigation structure
-     */
-    initializeSearchData() {
-        this.searchData = [
-            // Results Management
-            { title: "Navigating the Results Page", page: "navigating-results-page", section: "Results Management", keywords: ["results", "navigation", "page", "view"] },
-            
-            // My Account
-            { title: "Account Settings", page: "account-settings", section: "My Account", keywords: ["account", "settings", "profile"] },
-            { title: "Project Overview", page: "project-overview", section: "My Account", keywords: ["project", "overview", "dashboard"] },
-            { title: "Team Performance", page: "team-performance", section: "My Account", keywords: ["team", "performance", "stats"] },
-            { title: "Sample Performance", page: "sample-performance", section: "My Account", keywords: ["sample", "performance", "quality"] },
-            
-            // Audience Management
-            { title: "Using the Audience Page", page: "audience-overview", section: "Audience Management", keywords: ["audience", "page", "overview", "using"] },
-            { title: "Create Audience", page: "create-audience", section: "Audience Management", keywords: ["create", "audience", "new", "setup"] },
-            { title: "General Settings", page: "audience-general-settings", section: "Audience Management", keywords: ["general", "settings", "audience", "configuration"] },
-            { title: "Audience Detail View", page: "x_audiencedetailview", section: "Audience Management", keywords: ["audience", "detail", "view", "specific"] },
-            { title: "Standard Screeners", page: "standardquestions", section: "Audience Management", keywords: ["standard", "screeners", "questions", "default"] },
-            { title: "Custom Screeners", page: "customscreeningquestions", section: "Audience Management", keywords: ["custom", "screeners", "questions", "personalized"] },
-            { title: "Audience Eliminations", page: "audienceelimination", section: "Audience Management", keywords: ["audience", "eliminations", "remove", "exclude"] },
-            { title: "Audience Recontacts", page: "audiencerecontacts", section: "Audience Management", keywords: ["audience", "recontacts", "follow-up", "repeat"] },
-            { title: "Define Quotas", page: "quotas", section: "Audience Management", keywords: ["define", "quotas", "limits", "targets"] },
-            { title: "NatRep Quotas", page: "national-representativity-quotas", section: "Audience Management", keywords: ["natrep", "quotas", "national", "representativity"] },
-            { title: "NatRep Regional", page: "natrep-regional", section: "Audience Management", keywords: ["natrep", "regional", "geographic", "location"] },
-            { title: "Interlocked Quotas", page: "interlocked-quotas", section: "Audience Management", keywords: ["interlocked", "quotas", "linked", "connected"] },
-            { title: "Pause Quotas", page: "pausequotas", section: "Audience Management", keywords: ["pause", "quotas", "stop", "suspend"] },
-            { title: "Soft Launch", page: "soft-launch", section: "Audience Management", keywords: ["soft", "launch", "test", "pilot"] },
-            { title: "Project Deadlines", page: "project-deadline", section: "Audience Management", keywords: ["project", "deadlines", "due", "dates"] },
-            { title: "Start Stop Time", page: "scheduledaudience", section: "Audience Management", keywords: ["start", "stop", "time", "schedule"] },
-            { title: "Response Limits", page: "completionscheduler", section: "Audience Management", keywords: ["response", "limits", "completion", "scheduler"] }
+    // Search data structure with all available help articles
+    getSearchData() {
+        return [
+            {
+                title: "Create Audience",
+                description: "Learn how to create and manage your target audiences",
+                url: "?page=create-audience",
+                content: "Define the target respondents for your survey by selecting country, completes, and audience name. Creates a scoped audience group tied to the project. Can be duplicated and customized later. Acts as a foundation for applying further targeting and quota settings.",
+                category: "Audience Management"
+            },
+            {
+                title: "Using the Audience Page",
+                description: "Understand how to navigate and use the audience page",
+                url: "?page=audience-overview",
+                content: "Navigate through your audience management interface. View and manage all your audience settings in one place.",
+                category: "Audience Management"
+            },
+            {
+                title: "General Settings",
+                description: "Configure general audience settings and preferences",
+                url: "?page=audience-general-settings",
+                content: "Set up general preferences and configurations for your audience. Manage basic settings that apply to all audience members.",
+                category: "Audience Management"
+            },
+            {
+                title: "Soft Launch",
+                description: "Set up and manage soft launch for your audience",
+                url: "?page=soft-launch",
+                content: "Configure soft launch settings to test your audience before full deployment. Manage launch timing and parameters.",
+                category: "Audience Scheduling"
+            },
+            {
+                title: "Project Deadline",
+                description: "Set custom deadlines for your project",
+                url: "?page=customdeadlines",
+                content: "Define project deadlines and timeline management. Set custom completion dates and manage project scheduling.",
+                category: "Audience Scheduling"
+            },
+            {
+                title: "Start / Stop Time",
+                description: "Configure when your audience starts and stops",
+                url: "?page=scheduledaudience",
+                content: "Set up start and stop times for your audience. Schedule when your audience becomes active and inactive.",
+                category: "Audience Scheduling"
+            },
+            {
+                title: "Response Limits",
+                description: "Set limits on audience responses",
+                url: "?page=completionscheduler",
+                content: "Configure response limits and completion settings. Manage how many responses your audience can provide.",
+                category: "Audience Scheduling"
+            },
+            {
+                title: "Standard Screeners",
+                description: "Set up standard screening questions for your surveys",
+                url: "?page=standardquestions",
+                content: "Configure standard screening questions that apply to all surveys. Set up common demographic and qualification questions.",
+                category: "Audience Targeting"
+            },
+            {
+                title: "Custom Screeners",
+                description: "Create custom screening questions for specific needs",
+                url: "?page=customscreeningquestions",
+                content: "Design custom screening questions tailored to your specific research needs. Create unique qualification criteria.",
+                category: "Audience Targeting"
+            },
+            {
+                title: "Audience Eliminations",
+                description: "Manage audience elimination rules and criteria",
+                url: "?page=audienceelimination",
+                content: "Set up rules for eliminating audience members based on specific criteria. Manage exclusion rules and filters.",
+                category: "Audience Targeting"
+            },
+            {
+                title: "Audience Recontacts",
+                description: "Manage recontact settings for your audience",
+                url: "?page=audiencerecontacts",
+                content: "Configure recontact settings and manage follow-up communications with your audience members.",
+                category: "Audience Targeting"
+            },
+            {
+                title: "Navigating the Results Page",
+                description: "Learn how to navigate and interpret your results",
+                url: "?page=navigating-results-page",
+                content: "Understand how to navigate through your survey results. Learn to interpret data and find insights in your research findings.",
+                category: "Results Management"
+            }
         ];
-    }
-
-    /**
-     * Search modal functionality
-     */
-    openSearchModal() {
-        const searchModal = document.getElementById('search-modal');
-        const searchInput = document.getElementById('search-input');
-        
-        if (searchModal) {
-            searchModal.classList.add('open');
-            document.body.style.overflow = 'hidden';
-            
-            // Focus search input after modal opens
-            setTimeout(() => {
-                if (searchInput) {
-                    searchInput.focus();
-                }
-            }, 100);
-        }
-    }
-
-    closeSearchModal() {
-        const searchModal = document.getElementById('search-modal');
-        const searchInput = document.getElementById('search-input');
-        
-        if (searchModal) {
-            searchModal.classList.remove('open');
-            document.body.style.overflow = '';
-            
-            // Clear search input and results
-            if (searchInput) {
-                searchInput.value = '';
-            }
-            this.hideModalSearchResults();
-        }
-    }
-
-    /**
-     * Show search results in modal
-     */
-    showModalSearchResults(query) {
-        const results = this.searchData.filter(item => {
-            const searchText = `${item.title} ${item.section} ${item.keywords.join(' ')}`.toLowerCase();
-            return searchText.includes(query.toLowerCase());
-        });
-
-        this.renderModalSearchResults(results, query);
-    }
-
-    /**
-     * Hide search results in modal
-     */
-    hideModalSearchResults() {
-        const resultsContainer = document.getElementById('search-results-container');
-        if (resultsContainer) {
-            resultsContainer.innerHTML = '';
-            resultsContainer.style.display = 'none';
-        }
-    }
-
-    /**
-     * Render search results in modal
-     */
-    renderModalSearchResults(results, query) {
-        let resultsContainer = document.getElementById('search-results-container');
-        
-        if (!resultsContainer) {
-            // Create results container if it doesn't exist
-            resultsContainer = document.createElement('div');
-            resultsContainer.id = 'search-results-container';
-            resultsContainer.className = 'search-results-container';
-            
-            const searchBox = document.querySelector('.SearchBox1zrymSLJX6TP');
-            if (searchBox && searchBox.parentNode) {
-                searchBox.parentNode.insertBefore(resultsContainer, searchBox.nextSibling);
-            }
-        }
-
-        if (results.length === 0) {
-            resultsContainer.innerHTML = `
-                <div class="search-no-results">
-                    <div class="search-no-results-icon">ðŸ”</div>
-                    <div class="search-no-results-text">No results found for "${query}"</div>
-                    <div class="search-no-results-suggestion">Try different keywords or check spelling</div>
-                </div>
-            `;
-        } else {
-            const resultsHtml = results.map(item => `
-                <div class="search-result-item" data-page="${item.page}">
-                    <div class="search-result-title">${this.highlightSearchTerm(item.title, query)}</div>
-                    <div class="search-result-section">${item.section}</div>
-                    <div class="search-result-keywords">${item.keywords.slice(0, 3).join(', ')}</div>
-                </div>
-            `).join('');
-
-            resultsContainer.innerHTML = `
-                <div class="search-results-header">
-                    <div class="search-results-count">${results.length} result${results.length !== 1 ? 's' : ''} found</div>
-                </div>
-                <div class="search-results-list">
-                    ${resultsHtml}
-                </div>
-            `;
-
-            // Add click handlers to result items
-            resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    const page = item.dataset.page;
-                    this.navigateToPage(page);
-                    this.closeSearchModal();
-                });
-            });
-        }
-
-        resultsContainer.style.display = 'block';
-    }
-
-    /**
-     * Highlight search terms in text
-     */
-    highlightSearchTerm(text, query) {
-        if (!query) return text;
-        const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<mark class="search-highlight">$1</mark>');
-    }
-
-    /**
-     * Navigate to a specific page
-     */
-    navigateToPage(page) {
-        const currentUrl = new URL(window.location);
-        currentUrl.searchParams.set('page', page);
-        window.location.href = currentUrl.toString();
     }
 
     performSearch(query) {
         if (query.trim()) {
-            // Navigate to server-side search route so results can be rendered
-            const url = window.location.pathname + '?page=search&q=' + encodeURIComponent(query.trim());
-            window.location.href = url;
+            const searchData = this.getSearchData();
+            const results = this.searchArticles(searchData, query);
+            this.showSearchResults(query, results);
         }
     }
 
-    showSearchSuggestions(query) {
-        // Basic search suggestions - can be enhanced with actual data
-        const suggestions = [
-            'Create Audience',
-            'Audience Settings',
-            'Standard Questions',
-            'Results Navigation'
-        ].filter(item => item.toLowerCase().includes(query.toLowerCase()));
+    searchArticles(articles, query) {
+        const searchTerm = query.toLowerCase().trim();
+        
+        return articles.filter(article => {
+            const searchableText = [
+                article.title,
+                article.description,
+                article.content,
+                article.category
+            ].join(' ').toLowerCase();
+            
+            return searchableText.includes(searchTerm);
+        }).sort((a, b) => {
+            // Prioritize title matches, then description, then content
+            const aTitleMatch = a.title.toLowerCase().includes(searchTerm);
+            const bTitleMatch = b.title.toLowerCase().includes(searchTerm);
+            
+            if (aTitleMatch && !bTitleMatch) return -1;
+            if (!aTitleMatch && bTitleMatch) return 1;
+            
+            return 0;
+        });
+    }
 
+    showSearchSuggestions(query) {
+        const searchData = this.getSearchData();
+        const suggestions = this.searchArticles(searchData, query).slice(0, 5);
+        
         if (suggestions.length > 0) {
             console.log('Search suggestions:', suggestions);
-            // Implement suggestion display logic here
+            // Could implement suggestion dropdown here
         }
     }
 
@@ -497,9 +370,44 @@ class ModernMobileApp {
         // Hide search suggestions
     }
 
-    showSearchResults(query) {
-        // Show search results
-        console.log('Showing results for:', query);
+    showSearchResults(query, results) {
+        const searchResults = document.getElementById('inline-search-results');
+        
+        if (!searchResults) return;
+        
+        if (results.length === 0) {
+            searchResults.innerHTML = `
+                <div class="search-no-results">
+                    <div class="search-no-results-icon">🔍</div>
+                    <h3>No results found</h3>
+                    <p>Try searching for different keywords or check your spelling.</p>
+                </div>
+            `;
+        } else {
+            const resultsHtml = results.map(article => `
+                <div class="search-result-item">
+                    <a href="${article.url}" class="search-result-link">
+                        <div class="search-result-content">
+                            <h3 class="search-result-title">${article.title}</h3>
+                            <p class="search-result-description">${article.description}</p>
+                            <span class="search-result-category">${article.category}</span>
+                        </div>
+                    </a>
+                </div>
+            `).join('');
+            
+            searchResults.innerHTML = `
+                <div class="search-results-header">
+                    <h3>Search Results for "${query}"</h3>
+                    <p>Found ${results.length} result${results.length !== 1 ? 's' : ''}</p>
+                </div>
+                <div class="search-results-list">
+                    ${resultsHtml}
+                </div>
+            `;
+        }
+        
+        searchResults.style.display = 'block';
     }
 
     /**
@@ -704,7 +612,7 @@ class ModernMobileApp {
         // Preload critical CSS and fonts
         const criticalResources = [
             'styles/modern-framework.css',
-            'styles/styles.css'
+            'styles/styles-mobile.css'
         ];
 
         criticalResources.forEach(resource => {
@@ -722,7 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ModernMobileApp();
 });
 
-// Add touch feedback styles
+// Add touch feedback styles and search results styles
 const touchStyles = `
 .touch-active {
     transform: scale(0.98);
@@ -734,11 +642,156 @@ const touchStyles = `
     box-shadow: 0 0 0 3px rgba(114, 80, 186, 0.1);
 }
 
+/* Search Results Styles */
+.search-results {
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.search-results-header {
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid #e1e5e9;
+    background: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.search-results-header h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.search-results-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.search-results-list {
+    padding: 8px 0;
+}
+
+.search-result-item {
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-link {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-link:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+.search-result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.search-result-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.3;
+}
+
+.search-result-description {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.4;
+}
+
+.search-result-category {
+    font-size: 12px;
+    color: #7250ba;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-no-results {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.search-no-results-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.search-no-results h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.search-no-results p {
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .touch-active {
         transform: none;
         opacity: 1;
     }
+    
+    .search-result-link {
+        transition: none;
+    }
+}
+
+/* Dark mode support */
+[data-color-mode="dark"] .search-results {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+[data-color-mode="dark"] .search-results-header {
+    background: #2a2a2a;
+    border-color: #333;
+}
+
+[data-color-mode="dark"] .search-result-title {
+    color: #ffffff;
+}
+
+[data-color-mode="dark"] .search-result-description {
+    color: #b0b0b0;
+}
+
+[data-color-mode="dark"] .search-result-link:hover {
+    background-color: #2a2a2a;
+}
+
+[data-color-mode="dark"] .search-no-results h3 {
+    color: #ffffff;
+}
+
+[data-color-mode="dark"] .search-no-results p {
+    color: #b0b0b0;
 }
 `;
 
