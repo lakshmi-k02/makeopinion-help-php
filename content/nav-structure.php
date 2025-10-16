@@ -1,5 +1,13 @@
 <?php
 $nav_items = [
+      [
+        "section" => "Managing Projects",
+        "items" => [
+            ["label" => "Create New Project", "page" => "create-new-project"],
+            ["label" => "Edit Project Details", "page" => "edit-project-details"]
+            // Add more as needed
+        ]
+        ],
     [
         "section" => "Results Management",
         "items" => [
@@ -30,7 +38,7 @@ $nav_items = [
                 "label" => "Creating Edit Audiences",
                 "submenu" => [
                     ["label" => "Create Audience", "page" => "create-audience"],
-                    ["label" => "General Settings", "page" => "audience-general-settings"],
+                    ["label" => "Edit Audience", "page" => "audience-general-settings"],
                     ["label" => "Audience Detail View", "page" => "x_audiencedetailview"]
                 ]
             ],

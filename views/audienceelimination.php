@@ -5,8 +5,7 @@
         <h1>Audience Eliminations</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
-            <p>Exclude specific respondents to ensure fresh participation.</p>
-            <p>Allows you to <strong>exclude respondents</strong> who have previously participated in other surveys or match a list of uploaded IDs. This helps prevent repeat participation, avoids survey fatigue, and improves the overall quality of your sample.</p>
+            <p>Remove users who already took part in previous surveys.</p>
           </div>
         </div>
       </div>
@@ -16,38 +15,22 @@
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
       <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-enable">
-          <div class="heading-text">How to Enable?</div>
+<h2 class="heading heading-2 header-scroll" id="how-to-use-eliminations">
+          <div class="heading-text">How To Use Eliminations</div>
         </h2>
-        <p><strong>From Design Tab:</strong></p>
-        <ul>
-          <li><strong>Access the Project</strong>: Open the survey project you’re working on.</li>
-          <li><strong>Select the Audience</strong>: Use the “Select Audience” dropdown to choose your audience.</li>
-          <li><strong>Edit Audience Settings</strong>:
-            <ul class="space-y-2">
-              <li>Click the <strong>⚙️ Edit Audience</strong> icon next to the add new audience.</li>
-              <li>Navigate to the <strong>Eliminations</strong> tab.</li>
-                   <span style="display:block;">
+        <ol>
+          <li>Open <strong>Edit Audience</strong> for the audience you want to adjust.</li>
+          <li>Go to the <strong>Eliminations</strong> tab.</li>
+          <li>Choose how you want to eliminate respondents:</li>
+          <li>Select from <strong>Previous Audiences</strong>. Or upload a list of specific <strong>User IDs</strong>.</li>
+          <li>(Optional) Enable <strong>Block CPX Projects</strong> to exclude users active in other CPX projects.</li>
+          <li>Click <strong>Save Changes</strong>.</li>
+                  <span style="display:block;">
           <img src="images/AudienceEliminations.png" alt="Audience Eliminations"
             class="screenshot-image"
             onclick="expandImage(this)">
         </span>
-            </ul>
-          </li>
-        </ul>
-
-        <p><strong>Enable Eliminations:</strong></p>
-        <ul class="space-y-2">
-          <li>Turn the <strong>Eliminations</strong> toggle to <strong>Enabled</strong>.</li>
-          <li>Choose one or both of the following:
-            <ul>
-              <li><strong>Previous Audiences</strong>: Select earlier survey projects to exclude respondents from.</li>
-              <li><strong>Upload Users</strong>: Upload a file containing user IDs you wish to block.</li>
-            </ul>
-          </li>
-        </ul>
-        <p><strong>Save Changes</strong> to apply your settings.</p>
+        </ol>
 
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
@@ -56,38 +39,54 @@
           <thead>
             <tr>
               <th>Field</th>
-              <th>Meaning</th>
-              <th>Notes</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Enabled</strong></td>
-              <td>Turns Eliminations on/off</td>
-              <td>Toggle switch</td>
+              <td><strong>1. Audience</strong></td>
+              <td>The specific audience being edited.</td>
             </tr>
             <tr>
-              <td><strong>Previous Audiences</strong></td>
-              <td>Exclude users from earlier surveys</td>
-              <td>Multiple audiences can be selected</td>
+              <td><strong>2. Eliminations Tab</strong></td>
+              <td>Section for blocking duplicate or unwanted respondents.</td>
             </tr>
             <tr>
-              <td><strong>Upload Users</strong></td>
-              <td>Manually block user IDs via upload</td>
-              <td>CSV file with unique respondent identifiers</td>
+              <td><strong>3. Eliminations Section</strong></td>
+              <td>Main settings area for exclusions.</td>
+            </tr>
+            <tr>
+              <td><strong>4. Previous Audiences</strong></td>
+              <td>Exclude users who already took part in earlier surveys.</td>
+            </tr>
+            <tr>
+              <td><strong>5. Upload Users</strong></td>
+              <td>Manually block respondents by uploading their user IDs.</td>
+            </tr>
+            <tr>
+              <td><strong>6. Select Previous Audiences Button</strong></td>
+              <td>Pick which earlier audience(s) to exclude.</td>
+            </tr>
+            <tr>
+              <td><strong>7. Block CPX Projects</strong></td>
+              <td>Prevent respondents active in other CPX projects from entering this survey.</td>
+            </tr>
+            <tr>
+              <td><strong>8. CPX Project Input Box</strong></td>
+              <td>Field where you define which CPX projects to block.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
-          <div class="heading-text">How It Behaves</div>
+        <h2 class="heading heading-2 header-scroll" id="how-to-use-eliminations">
+          <div class="heading-text">How it Works</div>
         </h2>
-        <ul class="space-y-2 modern-list">
-          <li>Respondents included in selected audiences or uploaded files are <strong>automatically excluded</strong> from participation.</li>
-          <li>Eliminations apply <strong>only to the selected audience</strong>, not the whole project.</li>
-          <li>Eliminated users won’t see or access the survey during fielding.</li>
-          <li>Useful for running <strong>net-new recruitments</strong> and avoiding duplicate entries across studies.</li>
-        </ul>
+        <ol>
+          <li>Eliminations prevent repeat participation by blocking respondents from earlier surveys or uploaded ID lists.</li>
+          <li>Excluded users will not receive invites or access the survey.</li>
+          <li>Eliminations only apply to the <strong>selected audience</strong>, not across the whole project.</li>
+          <li>This helps reduce survey fatigue and ensures cleaner, net-new sample data.</li>
+        </ol>
 
       </div>
 

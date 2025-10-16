@@ -2,10 +2,10 @@
   <header id="content-head">
     <div class="row clearfix">
       <div class="col-xs-9">
-        <h1>Completion Scheduler</h1>
+        <h1>Response Limits</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
-            <p>Control the pace of data collection by limiting the number of responses received over time.</p>
+            <p>Control how many responses are received over defined intervals. This helps pace fielding instead of receiving all completes at once.</p>
           </div>
         </div>
       </div>
@@ -16,43 +16,11 @@
     <section class="content-body grid-100">
       <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
-        <h2 class="heading heading-2 header-scroll" id="what-it-does">
-          <div class="heading-text">What It Does?</div>
-        </h2>
-        <p>Lets you manage how many responses are collected per hour, day, week, or custom period to avoid spikes and ensure smoother data flow.</p>
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-enable">
-          <div class="heading-text">How to Enable?</div>
-        </h2>
-        <h4>From Create Survey:</h4>
-        <ul>
-          <li>Click <strong>Start a Project</strong> in the upper-right corner of your account.</li>
-          <li>Choose one of the options: <strong>Get Survey Participants</strong>, <strong>Start a new survey</strong>, or <strong>Select Survey Templates</strong>.</li>
-        </ul>
-        <h4>From Edit Survey:</h4>
-        <ul>
-          <li><strong>Access the Project</strong>: Navigate to the project where you want to enable the completion scheduler feature.</li>
-          <li><strong>Select the Audience</strong>: Open the audience you want to configure for completion scheduler.</li>
-        </ul>
-        <h4>Edit Audience Settings:</h4>
-        <ol>
-          <li>Go to <strong>Edit Audience</strong>.</li>
-          <li>Navigate to the <strong>Scheduling</strong> tab.</li>
-        </ol>
-        <h4>Enable Completion Scheduler:</h4>
-        <ol>
-          <li>Locate the “Completion Scheduler” section.</li>
-               <span style="display:block;">
-          <img src="images/CompletionScheduler.png" alt="Completion Scheduler"
+        <span style="display:block;">
+          <img src="images/CompletionScheduler2.png" alt="Response Limits"
             class="screenshot-image"
             onclick="expandImage(this)">
         </span>
-          <li>Activate it using the toggle.</li>
-          <li>Define interval duration (e.g., hours or days).</li>
-          <li>Specify the number of completes allowed per interval.</li>
-          <li>Click <strong>Build Schedule</strong> to confirm settings.</li>
-        </ol>
-        <p><strong>Save Changes:</strong> Click <strong>Save</strong> to apply your settings. Once saved, pacing limits will begin when the audience is launched.</p>
 
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
@@ -61,44 +29,75 @@
           <thead>
             <tr>
               <th>Field</th>
-              <th>Meaning</th>
-              <th>Notes</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Enabled</td>
-              <td>Turns Completion Scheduler on/off</td>
-              <td>Toggle switch</td>
+              <td><strong>1. Audience #2</strong></td>
+              <td>Click the audience to open settings.</td>
             </tr>
             <tr>
-              <td>Interval</td>
-              <td>Time period used for pacing</td>
-              <td>Choose from hours/days/custom</td>
+              <td><strong>2. Scheduling Tab</strong></td>
+              <td>Section where timing and pacing controls are set.</td>
             </tr>
             <tr>
-              <td>Request</td>
-              <td>Number of completes allowed per interval</td>
-              <td>Required when enabled</td>
+              <td><strong>3. Response Limits</strong></td>
+              <td>Main section to enable pacing for responses.</td>
             </tr>
             <tr>
-              <td>Build Schedule</td>
-              <td>Confirms and applies interval logic</td>
-              <td>Must be clicked to activate</td>
+              <td><strong>4. Interval Setup</strong></td>
+              <td>Defines the pacing interval (e.g., hours, days, weeks).</td>
+            </tr>
+            <tr>
+              <td><strong>5. Interval</strong></td>
+              <td>The length of each time window (e.g., 1 day, 2 hours).</td>
+            </tr>
+            <tr>
+              <td><strong>6. Request</strong></td>
+              <td>The number of completes allowed per interval.</td>
+            </tr>
+            <tr>
+              <td><strong>7. Completes</strong></td>
+              <td>The cap for responses during each interval.</td>
+            </tr>
+            <tr>
+              <td><strong>8. Build Schedule</strong></td>
+              <td>Confirms and generates the pacing intervals.</td>
+            </tr>
+            <tr>
+              <td><strong>9. Interval Tracker</strong></td>
+              <td>Displays all scheduled intervals, with start times, caps, and status.</td>
+            </tr>
+            <tr>
+              <td><strong>10. Schedule at Launch</strong></td>
+              <td>First interval begins as soon as the survey launches.</td>
+            </tr>
+
+            <tr>
+              <td><strong>11. Delete Schedule</strong></td>
+              <td>Removes all pacing intervals if you want to revert to unlimited responses.</td>
             </tr>
           </tbody>
         </table>
-
-        <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
-          <div class="heading-text">How It Behaves</div>
+        <span style="display:block;">
+          <img src="images/CompletionScheduler.png" alt="Response Limits"
+            class="screenshot-image"
+            onclick="expandImage(this)">
+        </span>
+        <h2 class="heading heading-2 header-scroll" id="how-it-works">
+          <div class="heading-text">How It Works</div>
         </h2>
-        <ul class="space-y-2 modern-list">
-          <li>Pacing starts once the audience is launched.</li>
-          <li>Responses are collected based on the specified interval and cap.</li>
-          <li>If the interval cap is reached, data collection pauses until the next interval.</li>
-          <li>Helps prevent overload and ensures higher data quality.</li>
-          <li>Works seamlessly with other scheduling features.</li>
-        </ul>
+        <ol>
+          <li>Define an Interval (timeframe) and set the number of completes allowed.</li>
+          <li>Click <strong>Build Schedule</strong> → system generates pacing intervals.</li>
+          <li>When the audience is launched, the first interval activates automatically.</li>
+          <li>If the response cap is reached before the interval ends, collection pauses.</li>
+          <li>At the next interval, collection resumes automatically.</li>
+          <li>You can monitor progress in the Interval Tracker.</li>
+          <li>Works in tandem with Start/Stop Time and Soft Launch for complete control.</li>
+          <li>Spreads out responses evenly, preventing overload and ensuring more stable data quality.</li>
+        </ol>
 
       </div>
 

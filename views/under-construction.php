@@ -38,7 +38,7 @@
 
                 <div style="display:flex; gap:12px; margin-top:28px;">
                     <a href="/" class="btn btn-primary" style="padding:12px 20px; font-size:15px; border-radius:6px; background:#0070DF; color:white; text-decoration:none;">Return to Home</a>
-                    <a href="/" class="btn" style="padding:12px 20px; font-size:15px; border-radius:6px; background:#f3f4f6; color:#111827; text-decoration:none;">Explore other docs</a>
+                    <a href="/help-center" class="btn" style="padding:12px 20px; font-size:15px; border-radius:6px; background:#f3f4f6; color:#111827; text-decoration:none;">Explore other docs</a>
                 </div>
 
                 <hr style="margin:30px 0; border:none; border-top:1px solid #e6e6e6;" />

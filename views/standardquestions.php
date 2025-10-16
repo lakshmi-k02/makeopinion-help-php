@@ -5,7 +5,7 @@
         <h1>Standard Screening Questions</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
-            <p>Include predefined demographic or profiling questions to refine your audience targeting.</p>
+            <p>Use ready-made demographic & profiling questions to help you target the right people.</p>
           </div>
         </div>
       </div>
@@ -15,34 +15,26 @@
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
       <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
-
-        <h2 class="heading heading-2 header-scroll" id="what-it-does">
-          <div class="heading-text">What It Does?</div>
+      <h2 class="heading heading-2 header-scroll" id="how-to-add-standard-questions">
+          <div class="heading-text">How to Add Standard Questions</div>
         </h2>
-        <p>
-          This section allows you to include predefined (standard) demographic or profiling questions from the platform's library. These questions help narrow down your audience based on age, gender, geography, employment status, household type, etc.
-        </p>
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-enable">
-          <div class="heading-text">How to Enable?</div>
-        </h2>
-        <ul>
-          <li>Click on <strong>“Add Screening Question”</strong> from the Audience Details section.</li>
-               <span style="display:block;">
+        <ol>
+          <li>List of default screening questions.</li>
+          <li>Click <strong>Add Screening Question</strong> from the Audience Details section.</li>
+                  <span style="display:block;">
+          <img src="images/StandardScreeningQuestins2.png" alt="Standard Screening Questions"
+            class="screenshot-image"
+            onclick="expandImage(this)">
+        </span>
+          <li>In the Standard Questions Library, browse or search categories.</li>
+          <li>Select the questions you need.</li>
+                  <span style="display:block;">
           <img src="images/StandardScreeningQuestins1.png" alt="Standard Screening Questions"
             class="screenshot-image"
             onclick="expandImage(this)">
         </span>
-          <li>The <strong>Standard Questions Library</strong> tab opens by default.</li>
-          <li>Browse or search for specific questions (e.g., ZIP Code, Employment Status).</li>
-          <li>Select the desired question(s).</li>
-          <li>Click <strong>“Add Question(s) to Audience”</strong>.</li>
-            <span style="display:block;">
-          <img src="images/StandardScreeningQuestiions2.png" alt="Standard Screening Questions"
-            class="screenshot-image"
-            onclick="expandImage(this)">
-        </span>
-        </ul>
+        </ol>
+
 
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
@@ -50,39 +42,57 @@
         <table class="modern-table">
           <thead>
             <tr>
-              <th>Field / Category</th>
+              <th>Field</th>
               <th>Description</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Basics / Geo / B2B / Healthcare</td>
-              <td>Organized groups of commonly used profiling questions</td>
+              <td><strong>1. Standard Questions Library</strong></td>
+              <td>Browse ready-made questions by category like Basics, Geo, or B2B.</td>
             </tr>
             <tr>
-              <td>CUSTOM</td>
-              <td>Separate category for user-created or specific questions</td>
+              <td><strong>2. Search Bar</strong></td>
+              <td>Find a specific question quickly by typing keywords.</td>
             </tr>
             <tr>
-              <td>Question Label</td>
-              <td>Each question is tagged (e.g., <code>ZIP_CODE</code>, <code>ETHNICITY</code>) for clarity</td>
+              <td><strong>3. Grouped Categories</strong></td>
+              <td>Filter by preset groups such as Basics, Geo, B2B, Automotive, Healthcare.</td>
             </tr>
             <tr>
-              <td>Question Preview</td>
-              <td>Displays the actual question text to be asked to the respondents</td>
+              <td><strong>4. Question Preview</strong></td>
+              <td>Shows the full text of the question respondents will see.</td>
+            </tr>
+            <tr>
+              <td><strong>5. User Library</strong></td>
+              <td>Access saved or previously used custom questions.</td>
+            </tr>
+            <tr>
+              <td><strong>6. CUSTOM Category</strong></td>
+              <td>Section where any of your custom-built questions are stored.</td>
+            </tr>
+            <tr>
+              <td><strong>7. Create New Question</strong></td>
+              <td>Create a custom screening question if it’s not already available.</td>
+            </tr>
+            <tr>
+              <td><strong>8. Add Question(s) to Audience</strong></td>
+              <td>Apply selected questions to your audience setup.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
-          <div class="heading-text">How It Behaves</div>
+        
+
+        <h2 class="heading heading-2 header-scroll" id="how-it-works">
+          <div class="heading-text">How It Works</div>
         </h2>
-        <ul class="space-y-2 modern-list">
-          <li>Standard questions are pre-configured — no customization of logic or wording needed.</li>
-          <li>These questions <strong>do not count</strong> toward your internal survey length but <strong>impact feasibility and cost</strong>.</li>
-          <li>They are added at the recruitment level, <strong>not inside the survey script</strong>.</li>
-          <li>The selection appears above the questionnaire, under <strong>Audience Details</strong>.</li>
-        </ul>
+        <ol>
+          <li>Standard questions are provided by the platform so you don’t need to write them yourself.</li>
+          <li>They help narrow down your audience using demographic and profiling traits.</li>
+          <li>They appear before your survey to qualify participants but don’t affect survey length.</li>
+          <li>Adding more screeners can influence cost and feasibility since fewer respondents may qualify.</li>
+        </ol>
 
       </div>
 

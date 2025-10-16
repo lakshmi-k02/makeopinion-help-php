@@ -571,3 +571,81 @@
 [data-color-mode="dark"] .search-highlight {
   background-color: rgba(114, 80, 186, 0.3);
 }
+
+/* Ultra-short heights (very small landscape) */
+  @media (orientation: landscape) and (max-height: 450px) {
+    .hero-title,
+    .page-title {
+      font-size: var(--text-3xl);
+    }
+
+    .hero-subtitle,
+    .page-description {
+      font-size: var(--text-base);
+    }
+
+    .hero-section,
+    .page-header {
+      padding: var(--space-6) var(--space-4);
+      margin-bottom: var(--space-8);
+    }
+  } 
+
+  @media (orientation: landscape) and (max-width: 1024px) {
+    /* Keep mobile header and hide desktop header */
+    .mobile-header {
+      display: flex !important;
+    }
+
+    .Header3zzata9F_ZPQ {
+      display: none !important;
+    }
+
+    /* Keep sidebar off-canvas like portrait */
+    .sidebar {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      width: 320px;
+      height: 100vh;
+      border-right: 1px solid var(--border-color);
+      z-index: var(--z-modal);
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    /* Content spacing similar to portrait */
+    .content-wrapper {
+      max-width: 100%;
+      padding: var(--space-6);
+    }
+
+    .main-content {
+      min-height: calc(100vh - 80px);
+    }
+
+    /* Reduce vertical padding to fit short heights */
+    .hero-section,
+    .page-header {
+      padding: var(--space-8) var(--space-6);
+    }
+
+    /* Keep single-column cards/grids */
+    .quick-links-grid,
+    .topics-grid,
+    .fields-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Make search form stack to avoid overflow */
+    .search-form {
+      flex-direction: column !important;
+      gap: var(--space-3);
+    }
+
+    .search-button {
+      width: 100%;
+    }
+  }

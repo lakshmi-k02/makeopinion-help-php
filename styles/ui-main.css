@@ -33569,7 +33569,24 @@ body {
 
 .App .markdown-body table {
     table-layout: var(--table-layout, auto);
-    word-break: normal
+    word-break: normal;
+    width: 100%;
+}
+
+/* Make the first column autofit to its content and stay on one line */
+.App .markdown-body table th:first-child,
+.App .markdown-body table td:first-child {
+    white-space: nowrap; /* keep first column on one line */
+    width: 1%; /* shrink to fit content */
+    max-width: none;
+}
+
+/* Allow other columns to wrap/break long content */
+.App .markdown-body table th:not(:first-child),
+.App .markdown-body table td:not(:first-child) {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .App .markdown-body .variable-underline {

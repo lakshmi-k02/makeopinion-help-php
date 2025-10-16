@@ -2,16 +2,10 @@
   <header id="content-head">
     <div class="row clearfix">
       <div class="col-xs-9">
-        <h1>Audience Recontacts</h1>
+        <h1>Recontacts</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
-            <p>The <em>Recontacts</em> feature enables the reuse of a specific set of users for longitudinal or follow-up studies. By enabling Recontacts, researchers can ensure consistency across study phases, deepen participant engagement, and gather time-based insights.</p>
-            <p>Two options are available:</p>
-            <ul>
-              <li><strong>Future Recontact Setup:</strong> Tag the current audience for recontact use in future studies.</li>
-              <li><strong>Recontact of Previous Audience:</strong> Use an already existing audience or upload user lists from earlier projects.</li>
-            </ul>
-            <p>This ensures cleaner segmentation, accurate targeting, and research continuity.</p>
+            <p>Use the Recontacts feature to invite the same respondents back for follow-up or longitudinal studies.</p>
           </div>
         </div>
       </div>
@@ -21,33 +15,28 @@
   <div class="grid-container-fluid" id="content-container">
     <section class="content-body grid-100">
       <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-enable">
-          <div class="heading-text">How to Enable?</div>
+                <h2 class="heading heading-2 header-scroll" id="how-to-use-recontacts">
+          <div class="heading-text">How to Use Recontacts</div>
         </h2>
-        <ol>
-          <li>Navigate to <strong>Edit Audience</strong>.</li>
+      <ol>
+          <li>Open <strong>Edit Audience</strong> for the audience you want to configure.</li>
           <li>Go to the <strong>Recontacts</strong> tab.</li>
-          <span style="display:block;">
-          <img src="images/audiencerecontacts.png" alt="Audience Recontacts"
+          <li>Toggle Recontacts <strong>ON</strong>.</li>
+          <li>Choose whether this audience will require a <strong>future recontact</strong> or is a <strong>recontact of a previous audience</strong>.</li>
+          <li>Select your source:
+            <ul>
+              <li><strong>Select Source(s)</strong> from past projects.</li>
+              <li>Or <strong>Upload Users</strong> with a CSV/Excel list of IDs.</li>
+            </ul>
+          </li>
+          <li>Click <strong>Save Changes</strong> to apply.</li>
+                  <span style="display:block;">
+          <img src="images/audiencerecontacts.png" alt="Recontacts"
             class="screenshot-image"
             onclick="expandImage(this)">
         </span>
-          <li>Toggle the <strong>Enabled</strong> switch.</li>
-          <li>Choose between:
-            <ul>
-              <li><em>This Audience will require a Recontact in the future</em> <strong>OR</strong></li>
-              <li><em>This Audience is a Recontact of a previous Audience</em>.</li>
-            </ul>
-          </li>
-          <li>If recontacting a previous audience:
-            <ul>
-              <li>Use <strong>Select Source(s)</strong> to choose prior projects.</li>
-              <li>Or switch to <strong>Upload Users</strong> to upload a list (CSV/Excel) of user IDs.</li>
-            </ul>
-          </li>
         </ol>
-        <p>Click <strong>Save Changes</strong> to apply.</p>
+
 
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
@@ -61,38 +50,50 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Enabled Toggle</strong></td>
-              <td>Activates the Recontacts feature.</td>
+              <td><strong>1. Audience</strong></td>
+              <td>The specific audience being edited.</td>
             </tr>
             <tr>
-              <td><strong>Recontact Type</strong></td>
-              <td>Choose between future use or using a previous audience.</td>
+              <td><strong>2. Recontacts Tab</strong></td>
+              <td>Section for enabling recontact features.</td>
             </tr>
             <tr>
-              <td><strong>Select Sources</strong></td>
-              <td>Choose from previously saved projects.</td>
+              <td><strong>3. Enabled Toggle</strong></td>
+              <td>Turns the Recontacts feature on or off.</td>
             </tr>
             <tr>
-              <td><strong>Upload Users</strong></td>
-              <td>Manually upload a list of user IDs for recontacting.</td>
+              <td><strong>4. Future Recontact Option</strong></td>
+              <td>Marks the current audience to be reused in a future project.</td>
             </tr>
             <tr>
-              <td><strong>User List View</strong></td>
-              <td>Displays uploaded users and count.</td>
+              <td><strong>5. Previous Audience Option</strong></td>
+              <td>Sets this audience as a recontact of an earlier audience.</td>
+            </tr>
+            <tr>
+              <td><strong>6. Select Sources</strong></td>
+              <td>Pick past projects to pull respondents from.</td>
+            </tr>
+            <tr>
+              <td><strong>6.1 Select Previous Audiences Button</strong></td>
+              <td>Opens a menu to choose which prior audience(s) to recontact.</td>
+            </tr>
+            <tr>
+              <td><strong>7. Upload Users</strong></td>
+              <td>Upload a CSV or Excel list of user IDs for recontacting.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
-          <div class="heading-text">How It Behaves</div>
+        <h2 class="heading heading-2 header-scroll" id="how-to-use-recontacts">
+          <div class="heading-text">How It Works</div>
         </h2>
-        <ul class="space-y-2 modern-list">
-          <li>Once enabled and saved, Recontacts are locked in for the current project configuration.</li>
-          <li>If using previous sources, only users from the selected audience will be recontacted.</li>
-          <li>Uploads are validated and visible in the “User List” section.</li>
-          <li>The platform ensures no duplicate responses across studies.</li>
-          <li>The system integrates Recontact and Elimination logic smoothly, preventing user overlap.</li>
-        </ul>
+        <ol>
+          <li>Recontacts let you invite a specific set of respondents again either now or later.</li>
+          <li>You can tag your <strong>current audience</strong> for reuse in future projects or import <strong>previous audiences</strong> into the current one.</li>
+          <li>Uploaded user lists are validated and shown in the system for tracking.</li>
+          <li>Once saved, recontact settings are locked to preserve study integrity.</li>
+          <li>The system prevents duplicates automatically and works seamlessly alongside <strong>Eliminations</strong>.</li>
+        </ol>
 
       </div>
 

@@ -2,10 +2,10 @@
     <header id="content-head">
         <div class="row clearfix">
             <div class="col-xs-9">
-                <h1>Edit Audience</h1>
+                <h1>Audience General Settings</h1>
                 <div class="excerpt">
                     <div class="rm-Markdown markdown-body" data-testid="RDMD">
-                        <p>Update the criteria for a specific audience to control who receives the survey.</p>
+                        <p>Edit your audience settings.</p>
                     </div>
                 </div>
             </div>
@@ -17,60 +17,32 @@
             <div class="rm-Markdown markdown-body rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
                 <ul class="modern-list">
                     <span style="display:block">
-                        <img src="images/EditAudience2.png" alt="edit audience"
+                        <img src="images/edit_audience1.png" alt="edit audience1"
                             class="screenshot-image"
                             onclick="expandImage(this)">
                     </span>
                 </ul>
 
-                <h2 class="heading heading-2 header-scroll">
-                    <div class="heading-anchor anchor waypoint" id="fields"></div>
-                    <div class="heading-text">
-                        <div id="section-fields" class="heading-anchor_backwardsCompatibility"></div>Fields
-                    </div>
-                    <a class="heading-anchor-icon fa fa-anchor" href="#fields"></a>
-                </h2>
+
                 <table class="modern-table">
                     <thead>
                         <tr>
                             <th>Field</th>
-                            <th>Meaning</th>
-                            <th>Notes</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Country</td>
-                            <td>Where the audience is located</td>
-                            <td>Auto-filled and cannot be changed</td>
+                            <td><strong>Audience #1</strong></td>
+                            <td>A specific audience block with its ID, flag (country), and summary metrics. Each project can contain multiple audiences.</td>
                         </tr>
                         <tr>
-                            <td>Completes</td>
-                            <td>Total number of required responses</td>
-                            <td>Choose from preset or custom</td>
-                        </tr>
-                        <tr>
-                            <td>Field Duration</td>
-                            <td>Time allowed for collecting data</td>
-                            <td>Shown in days</td>
-                        </tr>
-                        <tr>
-                            <td>LOI</td>
-                            <td>Estimated survey completion time</td>
-                            <td>Shown in minutes</td>
-                        </tr>
-                        <tr>
-                            <td>Incidence</td>
-                            <td>Target population frequency</td>
-                            <td>Impacts feasibility and cost</td>
-                        </tr>
-                        <tr>
-                            <td>CPI</td>
-                            <td>Cost per interview</td>
-                            <td>Shown in USD</td>
+                            <td><strong>The 3 dots</strong></td>
+                            <td>Click the 3 dots to see drop down menu then select Edit Audience Settings</td>
                         </tr>
                     </tbody>
                 </table>
+
 
                 <h2 class="heading heading-2 header-scroll">
                     <div class="heading-anchor anchor waypoint" id="behavior"></div>

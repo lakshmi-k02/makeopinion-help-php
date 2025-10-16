@@ -1,5 +1,3 @@
-
-
 <article class="rm-Article" id="content">
     <header id="content-head">
         <div class="row clearfix">
@@ -7,7 +5,7 @@
                 <h1>Create Audience</h1>
                 <div class="excerpt">
                     <div class="rm-Markdown markdown-body" data-testid="RDMD">
-                        <p>Define the target respondents for your survey by selecting country, completes, and audience name.</p>
+                        <p>Choose your target audience in the current project.</p>
                     </div>
                 </div>
             </div>
@@ -18,7 +16,7 @@
         <section class="content-body grid-100">
             <div class="desktop-article rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
                 <span style="display:block;">
-                    <img src="images/createAudience4.png" alt="edit audience"
+                    <img src="images/create-audience1.png" alt="edit audience"
                         class="screenshot-image"
                         onclick="expandImage(this)">
                 </span>
@@ -51,6 +49,37 @@
                         </tr>
                     </tbody>
                 </table>
+                <span style="display:block;">
+                    <img src="images/create-audience2.png" alt="edit audience"
+                        class="screenshot-image"
+                        onclick="expandImage(this)">
+                </span>
+                <h2 class="heading heading-2 header-scroll" id="fields">
+                    <div class="heading-text">Fields</div>
+                </h2>
+                <table class="modren-table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Category</strong></td>
+                            <td>Filter available templates by category (e.g., General Population, Niche groups). Helps narrow down the type of audience you want to start with.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Available Templates</strong></td>
+                            <td>Predefined audience templates (e.g., General Population) you can select to quickly define a target group.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Targeting Variables</strong></td>
+                            <td>Demographic attributes (e.g., Gender, Age ranges) you can choose to define who will be included in your audience.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
 
                 <h2 class="heading heading-2 header-scroll" id="how-it-behaves">
                     <div class="heading-text">How It Behaves</div>
@@ -69,4 +98,4 @@
             <nav aria-label="Pagination Controls" class="PaginationControlsjDYuqu8pBMUy rm-Pagination"></nav>
         </section>
     </div>
-</article>  
+</article>

@@ -2,7 +2,7 @@
   <header id="content-head">
     <div class="row clearfix">
       <div class="col-xs-9">
-        <h1>Scheduled Audience</h1>
+        <h1>Start/Stop Time</h1>
         <div class="excerpt">
           <div class="rm-Markdown markdown-body" data-testid="RDMD">
             <p>Schedule an audience to start at a specific date and time, automatically triggering invitations and fielding.</p>
@@ -16,45 +16,11 @@
     <section class="content-body grid-100">
       <div class="rm-Markdown markdown-body ng-non-bindable" data-testid="RDMD">
 
-        <h2 class="heading heading-2 header-scroll" id="what-it-does">
-          <div class="heading-text">What It Does</div>
-        </h2>
-        <ul>
-          <li>Lets you configure a specific date and time for an audience to start fielding.</li>
-          <li>Triggers automatic delivery of invites and links at the scheduled time.</li>
-          <li>Provides hands-free control of launching segments over time.</li>
-        </ul>
-
-        <h2 class="heading heading-2 header-scroll" id="how-to-use">
-          <div class="heading-text">How to Schedule an Audience</div>
-        </h2>
-
-        <h4>1. Navigate to Audience Settings</h4>
-        <ul>
-          <li>On the project page, select the audience you want to schedule.</li>
-        </ul>
-
-        <h4>2. Enable Scheduling</h4>
-        <ul>
-          <li>Click on the <strong>Schedule Audience</strong> toggle.</li>
-                    <span style="display:block;">
-          <img src="images/ScheduleAudience.png" alt="Scheduled Audience"
+        <span style="display:block;">
+          <img src="images/ScheduleAudience.png" alt="Start/Stop Time"
             class="screenshot-image"
             onclick="expandImage(this)">
         </span>
-          <li>This will enable the datetime picker below the audience name.</li>
-        </ul>
-
-        <h4>3. Set Schedule</h4>
-        <ul>
-          <li>Select the exact <strong>date</strong> and <strong>time</strong> you want the audience to launch.</li>
-          <li>Make sure the timezone is correct (usually UTC or user’s local time).</li>
-        </ul>
-
-        <h4>4. Save and Exit</h4>
-        <ul>
-          <li>Click <strong>Save</strong> to confirm the scheduling setup.</li>
-        </ul>
 
         <h2 class="heading heading-2 header-scroll" id="fields">
           <div class="heading-text">Fields</div>
@@ -63,37 +29,52 @@
           <thead>
             <tr>
               <th>Field</th>
-              <th>Meaning</th>
-              <th>Notes</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Schedule Toggle</td>
-              <td>Enable or disable the schedule</td>
-              <td>Uncheck if audience should go live immediately</td>
+              <td><strong>1. Audience #2</strong></td>
+              <td>Click the audience to open settings.</td>
             </tr>
             <tr>
-              <td>Date</td>
-              <td>The calendar date of launch</td>
-              <td>Required if schedule is enabled</td>
+              <td><strong>2. Scheduling Tab</strong></td>
+              <td>Section where timing settings are configured.</td>
             </tr>
             <tr>
-              <td>Time</td>
-              <td>Exact time to send invites</td>
-              <td>Use 24-hour format (HH:MM)</td>
+              <td><strong>3. Start/Stop Time</strong></td>
+              <td>Main section to schedule when the audience begins and ends.</td>
+            </tr>
+            <tr>
+              <td><strong>4. Auto Start</strong></td>
+              <td>Set a date and time for the survey to automatically begin fielding.</td>
+            </tr>
+            <tr>
+              <td><strong>5. Manual Launch Confirmation</strong></td>
+              <td>
+                A reminder that the project must be launched manually once for pricing confirmation. 
+                After that, the system will auto-resume as scheduled.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>6. Auto Stop</strong></td>
+              <td>Set a date and time for the survey to automatically stop collecting responses.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2 class="heading heading-2 header-scroll" id="behavior">
-          <div class="heading-text">How It Behaves</div>
+        <h2 class="heading heading-2 header-scroll" id="how-it-works">
+          <div class="heading-text">How It Works (Step-by-Step Flow)</div>
         </h2>
-        <ul class="modern-list">
-          <li>Audience launches exactly at the time you specify.</li>
-          <li>All invite emails and survey links are released automatically.</li>
-          <li>You can reschedule or cancel the schedule at any time before the audience starts.</li>
-        </ul>
+        <ol>
+          <li>Set <strong>Auto Start</strong> → Pick a date/time for the audience to begin.</li>
+          <li>At this time, invites and survey links are automatically activated.</li>
+          <li>Confirm Pricing Manually → You must launch the project once manually for confirmation.</li>
+          <li>Survey Runs Automatically until the <strong>Auto Stop</strong> time is reached.</li>
+          <li>At <strong>Auto Stop</strong>, collection halts automatically.</li>
+          <li>You can <strong>edit or cancel</strong> the schedule anytime before activation.</li>
+          <li>All times are set according to <strong>your local time zone</strong>.</li>
+        </ol>
 
       </div>
 
